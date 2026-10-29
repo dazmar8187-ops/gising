@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Member · Gising Sining House</title>
+<meta name="description" content="A Gising Sining House member's public profile: what they write, who they write with, and the songs they've finished.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/flagpages.css">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#2D47B8">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg width="26" height="22" viewBox="0 0 26 22" aria-hidden="true"><g stroke="currentColor" stroke-width="1.6"><path d="M0 2h26M0 6.5h26M0 11h26M0 15.5h26M0 20h26"/></g><circle cx="17" cy="11" r="3.6" fill="var(--accent)"/></svg>
+      <span data-brand>Gising Sining House</span>
+    </a>
+    <ul>
+      <li><a href="room.html">The Room</a></li>
+      <li><a href="camps.html">Camps</a></li>
+    </ul>
+    <div class="nav-actions"><a class="btn" href="join.html">Join free</a></div>
+  </div>
+</header>
+
+<main id="main"><div id="mp" aria-live="polite">
+  <div class="mp-private"><div class="wrap"><p class="eyebrow">Member</p><h1>Loading…</h1></div></div>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-brand"><span>© 2026 <span data-brand>Gising Sining House</span> · Manila</span><span>Write with People, Finish the Song</span></div>
+    <nav class="footer-links" aria-label="Footer">
+      <ul><li><a href="room.html">The Room</a></li><li><a href="camps.html">Camps</a></li><li><a href="services.html">Services</a></li><li><a href="academy.html">Academy</a></li><li><a href="about.html">About</a></li><li><a href="mentors.html">Mentors</a></li><li><a href="contact.html">Contact</a></li><li><a href="join.html">Join free</a></li></ul>
+      <ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="camp-terms.html">Camp terms</a></li><li><a href="community.html">Community guidelines</a></li><li><a href="member-agreement.html">Member agreement</a></li></ul>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/config.js"></script>
+<script src="assets/flags.js"></script>
+<script src="assets/flag-links.js"></script>
+<script>
+// Public profile: member.html?id=<member id>. Shown only when the member opted in, and only while
+// "public-profiles" or "stave-portfolio" is on. Live data from /api/public-profile; demo data from this browser.
+(function () {
+  var box = document.getElementById("mp");
+  var id = new URLSearchParams(location.search).get("id") || "";
+  var DEMO_KEY = "stave_room_demo_v3";
+  var AV = ["#2D47B8", "#14221F", "#4A5A55", "#3D57C9", "#26407A", "#2F4A43", "#5C6A9E", "#8A6A1F"];
+  var LINES = [["F", "Flourish"], ["D", "Deliver"], ["B", "Book"], ["G", "Grow"], ["E", "Establish"]];
+  var esc = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); };
+  var safeUrl = function (u) { return /^https?:\/\//i.test(u || "") ? u : ""; };
+  var colorFor = function (k) { var h = 0; for (var i = 0; i < k.length; i++) h = (h * 31 + k.charCodeAt(i)) % 997; return AV[h % AV.length]; };
+  var initials = function (n) { return String(n || "?").split(/\s+/).map(function (w) { return w[0]; }).slice(0, 2).join("").toUpperCase(); };
+  var on = function (f) { return window.Flags && window.Flags.isOn(f); };
+
+  function message(title, text, cta) {
+    box.innerHTML = '<div class="mp-private"><div class="wrap"><p class="eyebrow">Member</p><h1>' + esc(title) + "</h1><p>" + esc(text) + "</p>" +
+      (cta ? '<a class="btn" href="join.html">Join the Room, free</a>' : "") + "</div></div>";
+    document.title = title + " · Gising Sining House";
+  }
+
+  // Normalise either source into { member, songs, stave }
+  function fromDemo() {
+    var st; try { st = JSON.parse(localStorage.getItem(DEMO_KEY) || "null"); } catch (e) { st = null; }
+    if (!st || !st.members) return null;
+    var m = st.members.filter(function (x) { return x.id === id; })[0];
+    if (!m) return { notFound: true };
+    var ext = st.ext || {};
+    var profilePublic = on("public-profiles") && !!(ext.profiles && ext.profiles.public && ext.profiles.public[id]);
+    var portfolioPublic = on("stave-portfolio") && !!(ext.portfolio && ext.portfolio.public && ext.portfolio.public[id]);
+    if (!profilePublic && !portfolioPublic) return { private: true };
+    var songs = portfolioPublic ? ((ext.ledger && ext.ledger.songs) || []).filter(function (s) { return (s.writers || []).indexOf(id) !== -1; }) : [];
+    var stave = portfolioPublic && ext.portfolio && ext.portfolio.stave ? ext.portfolio.stave[id] : null;
+    return { member: m, songs: songs, stave: stave, portfolio: portfolioPublic };
+  }
+
+  function staveHtml(stave) {
+    if (!stave) return "";
+    var lit = stave.lit || [];
+    var top = stave.top || stave.line || (stave.key ? stave.key : null);
+    if (!lit.length && top) { var keys = ["E", "G", "B", "D", "F"]; lit = keys.slice(0, keys.indexOf(typeof top === "string" ? top : top.key) + 1); }
+    return '<section><p class="eyebrow">The 5 Keys</p><h2 style="font-size:var(--step-2);margin:8px 0 14px">' +
+      (lit.length ? "Up to the " + esc(lit[lit.length - 1]) + " line" : "Starting at the bottom line") + '</h2><div class="mp-stave">' +
+      LINES.map(function (l) { return '<div class="' + (lit.indexOf(l[0]) !== -1 ? "lit" : "") + '"><b>' + l[0] + "</b><span>" + l[1] + "</span></div>"; }).join("") + "</div></section>";
+  }
+  function songsHtml(songs) {
+    if (!songs || !songs.length) return "";
+    var rel = songs.filter(function (s) { return s.status && s.status.released; }).length;
+    var reg = songs.filter(function (s) { return s.status && s.status.registered; }).length;
+    return '<section><p class="eyebrow">Songs</p><h2 style="font-size:var(--step-2);margin:8px 0 6px">' + songs.length + " finished · " + reg + " registered · " + rel + ' released</h2><div class="mp-songs">' +
+      songs.map(function (s) {
+        var st = s.status || {};
+        return "<div><b>" + esc(s.title || "Untitled") + "</b><span>" + (st.released ? '<span class="mp-badge rel">Released</span>' : "") + (st.registered ? '<span class="mp-badge reg">Registered</span>' : "") +
+          (!st.released && !st.registered ? '<span class="mp-badge">Finished</span>' : "") + "</span></div>";
+      }).join("") + "</div></section>";
+  }
+
+  function render(d) {
+    var m = d.member;
+    var av = m.photo && /^(data:image\/|https?:)/.test(m.photo) ? '<img src="' + esc(m.photo) + '" alt="">' : esc(initials(m.name));
+    var link = safeUrl(m.link);
+    box.innerHTML = '<div class="mp"><div class="wrap">' +
+      '<div class="mp-h"><span class="mp-av" style="background:' + colorFor(m.id || m.name) + '">' + av + '</span><div><p class="eyebrow">' + (m.host ? "Host" : m.mentor ? "Visiting mentor" : "Gising Sining House member") + "</p><h1>" + esc(m.name) + '</h1><p class="mono">' + esc(m.city || "") + (m.country ? ", " + esc(m.country) : "") + "</p></div></div>" +
+      (m.bio ? '<p class="mp-bio">' + esc(m.bio) + "</p>" : "") +
+      '<dl class="mp-facts"><div><dt>Brings</dt><dd>' + esc((m.roles || []).join(", ") || "Not added yet") + '</dd></div><div><dt>Writes in</dt><dd>' + esc((m.languages || []).join(", ") || "Not added yet") + '</dd></div><div><dt>Sounds</dt><dd>' + esc((m.sounds || []).join(", ") || "Not added yet") + "</dd></div>" +
+      (link ? '<div><dt>Listen</dt><dd><a href="' + esc(link) + '" target="_blank" rel="noopener">' + esc(link) + "</a></dd></div>" : "") + "</dl>" +
+      (on("stave-portfolio") ? staveHtml(d.stave) + songsHtml(d.songs) : "") +
+      '<p class="note-small">' + esc((m.name || "").split(" ")[0]) + ' writes in the Gising Sining House Room. <a href="join.html">Join free</a> to write with them.</p></div></div>';
+    document.title = m.name + " · Gising Sining House";
+  }
+
+  function demoOr(msg) {
+    var d = fromDemo();
+    if (!d) return message("Profile not found.", "We couldn't find that member.", true);
+    if (d.notFound) return message("Profile not found.", "We couldn't find that member.", true);
+    if (d.private) return message("This profile is private.", "This member hasn't made their profile public.", true);
+    render(d);
+  }
+
+  function start() {
+    if (!on("public-profiles") && !on("stave-portfolio")) return message("This page isn't open yet.", "Public member profiles are coming soon.", true);
+    if (!id) return message("Profile not found.", "This link is missing the member's id.", true);
+    if (!/^https?:/.test(location.protocol)) return demoOr();
+    fetch("/api/public-profile?id=" + encodeURIComponent(id), { credentials: "same-origin" }).then(function (r) {
+      var json = (r.headers.get("content-type") || "").indexOf("application/json") !== -1;
+      if (r.ok && json) return r.json().then(function (d) { if (d && d.member) render(d); else demoOr(); });
+      if (json && (r.status === 404 || r.status === 403)) return r.json().then(function (d) {
+        if (d && d.private) message("This profile is private.", "This member hasn't made their profile public.", true);
+        else message("Profile not found.", "We couldn't find that member.", true);
+      });
+      demoOr(); // no server function (demo deploy): fall back to this browser's demo data
+    }).catch(demoOr);
+  }
+  (window.Flags && window.Flags.ready ? window.Flags.ready : Promise.resolve()).then(start, start);
+})();
+</script>
+<script src="assets/analytics.js" defer></script>
+</body>
+</html>

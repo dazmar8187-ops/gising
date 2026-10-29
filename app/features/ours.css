@@ -1,0 +1,69 @@
+/* "Our versions" feature styles (Where You Stand, Credits, the Shelf, the House Letter). Built on the site tokens; works in light and dark. */
+
+/* Where You Stand Right Now */
+.rd-app{gap:22px}
+.rd-g{border:0;border-top:2px solid var(--ink);margin:0;padding:14px 0 0;min-width:0}
+.rd-g legend{font-family:var(--display);font-weight:800;font-size:var(--step-1);display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;padding:0}
+.rd-g legend b{font-family:var(--mono);color:var(--accent)}
+.rd-g legend small{font-family:var(--body);font-weight:400;font-size:.92rem;color:var(--ink-soft);flex-basis:100%}
+.rd-q{display:grid;gap:8px;padding:12px 0;border-bottom:1px solid var(--line)}
+.rd-q p{margin:0}
+.rd-scale{display:flex;flex-wrap:wrap;gap:8px}
+.rd-scale label{position:relative;cursor:pointer}
+.rd-scale input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.rd-scale span{display:inline-block;padding:.4em .95em;border:1px solid var(--line);border-radius:999px;font-family:var(--mono);font-size:.8rem;background:var(--paper)}
+.rd-scale.opts span{font-family:var(--body);font-size:.92rem;border-radius:8px}
+.rd-scale input:checked + span{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.rd-scale input:focus-visible + span{outline:2px solid var(--accent);outline-offset:2px}
+.rd-bars{display:grid;gap:8px}
+.rd-bar{display:grid;grid-template-columns:18px 1fr 32px;gap:10px;align-items:center;font-family:var(--mono);font-size:.8rem}
+.rd-bar span{height:8px;border-radius:999px;background:var(--line);overflow:hidden}
+.rd-bar i{display:block;height:100%;background:var(--accent);border-radius:999px}
+.rd-bar em{font-style:normal;color:var(--ink-soft);text-align:right}
+.rd-panel h2{font-size:var(--step-1)}
+
+/* Credits */
+.cr-meter{height:10px;border-radius:999px;background:var(--line);overflow:hidden}
+.cr-meter i{display:block;height:100%;background:var(--accent)}
+.cr-list{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:.92rem}
+.cr-list li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:6px}
+.cr-list b{font-family:var(--mono);font-weight:600;white-space:nowrap}
+.cr-thank{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 0 0;border-top:1px dashed var(--line);margin-top:10px}
+.cr-roll{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:.92rem}
+
+/* The Shelf (cards mirror assets/flagpages.css) */
+.sh-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.sh-card{border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;gap:14px;align-content:start;background:var(--paper);min-width:0}
+.sh-card h3{font-size:var(--step-1);font-weight:800;margin:2px 0}
+.sh-by{font-weight:600;margin:0}
+.sh-cities,.sh-where-h{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft);margin:0}
+.sh-note{color:var(--ink-soft);margin:4px 0 0}
+.sh-ex{color:var(--accent)}
+.sh-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0}
+.sh-facts dt{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft)}
+.sh-facts dd{margin:0;font-size:.92rem}
+.sh-where{display:grid;gap:8px}
+.sh-bar{display:flex;height:10px;border-radius:999px;overflow:hidden;background:var(--line)}
+.sh-bar .w0{background:var(--accent)}.sh-bar .w1{background:var(--ink)}.sh-bar .w2{background:var(--sun)}.sh-bar .w3{background:var(--ink-soft)}.sh-bar .fee{background:var(--line)}
+.sh-where ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.88rem}
+.sh-actions{display:flex;flex-wrap:wrap;gap:10px}
+.sh-card .btn{font-size:.9rem;padding:.55em 1.1em}
+.btn.is-off{opacity:.55;cursor:default}
+.sh-mine{list-style:none;margin:0;padding:0;display:grid}
+.sh-mine li{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.sh-mine li div{display:grid;gap:2px}
+
+/* House Letter */
+.lt-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,320px);gap:16px;align-items:start}
+@media (max-width:860px){.lt-wrap{grid-template-columns:minmax(0,1fr)}}
+.lt-side{display:grid;gap:16px}
+.lt-letter h2{font-size:var(--step-2);font-weight:800}
+.lt-by{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:.9rem;color:var(--ink-soft);margin:0}
+.lt-body{display:grid;gap:.9em;max-width:62ch;font-size:1.02rem}
+.lt-body p{margin:0}
+.lt-side textarea{font:inherit;padding:.6em .8em;border-radius:6px;border:1px solid var(--line);background:var(--paper);color:var(--ink);width:100%;resize:vertical}
+.lt-list{list-style:none;margin:0;padding:0;display:grid}
+.lt-list li{padding:8px 0;border-bottom:1px solid var(--line)}
+.lt-list a{display:grid;gap:2px;text-decoration:none;color:inherit}
+.lt-list a span,.lt-list li > span{font-size:.85rem;color:var(--ink-soft)}
+.stave-wrap aside > section + section{margin-top:16px}

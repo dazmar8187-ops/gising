@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin · Gising Sining House</title>
+<meta name="robots" content="noindex">
+<!-- /admin opens the admin area of the members' app.
+     Live (connected to GHL): goes to the app's admin, which asks the host or a mentor to sign in by email.
+     Demo (not connected, or opened as a file): signs in as the sample host, Darryl. -->
+<noscript><meta http-equiv="refresh" content="0; url=../app/#/admin"></noscript>
+<script>
+(function () {
+  var demo = "../app/#/as/darryl", live = "../app/#/admin";
+  if (!/^https?:$/.test(location.protocol)) { location.replace(demo); return; }
+  var done = false, go = function (u) { if (!done) { done = true; location.replace(u); } };
+  setTimeout(function () { go(demo); }, 4000);
+  fetch("/api/health", { credentials: "same-origin" }).then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) { go(d && d.mode === "ghl" ? live : demo); }, function () { go(demo); });
+})();
+</script>
+</head>
+<body style="font-family:system-ui,sans-serif;background:#EEF0EA;color:#14221F;padding:40px">
+<p>Opening the admin area… <a href="../app/#/admin">Continue</a></p>
+</body>
+</html>

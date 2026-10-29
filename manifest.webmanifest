@@ -1,0 +1,16 @@
+{
+  "name": "Gising Sining House",
+  "short_name": "Gising Sining House",
+  "description": "The songwriting room: a weekly prompt, cowrite groups, honest notes and your house tools.",
+  "start_url": "/app/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#EEF0EA",
+  "theme_color": "#2D47B8",
+  "icons": [
+    { "src": "/assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

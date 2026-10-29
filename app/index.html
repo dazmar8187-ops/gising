@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Room · Gising Sining House</title>
+<meta name="description" content="The members' room of Gising Sining House: the feed, the calendar, cowrites, members, the map, the 5 Keys and the academy.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="features/could.css">
+<link rel="stylesheet" href="features/great.css">
+<link rel="stylesheet" href="features/ours.css">
+<link rel="stylesheet" href="api.css">
+<link rel="manifest" href="../manifest.webmanifest">
+<meta name="theme-color" content="#2D47B8">
+</head>
+<body class="app">
+
+<div class="demo-ribbon" id="demoRibbon">Demo mode: everything you do here is saved in this browser only. <button type="button" id="resetDemo">Reset demo</button></div>
+
+<!-- Up next: countdown to the next live session -->
+<a class="upnext" id="upnext" href="#/calendar">
+  <span class="upnext-title" id="upnextTitle">Loading…</span>
+  <span class="upnext-clock" id="upnextClock">--d : --h : --m : --s</span>
+  <span class="upnext-link">See the calendar →</span>
+</a>
+
+<div class="shell">
+  <nav class="side" aria-label="The Room">
+    <a class="side-brand" href="#/feed" aria-label="Gising Sining House, the Room">
+      <svg width="28" height="24" viewBox="0 0 26 22" aria-hidden="true"><g stroke="currentColor" stroke-width="1.6"><path d="M0 2h26M0 6.5h26M0 11h26M0 15.5h26M0 20h26"/></g><circle cx="17" cy="11" r="3.6" fill="var(--accent)"/></svg>
+    </a>
+    <a href="#/feed" data-nav="feed"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Feed</span></a>
+    <a href="#/calendar" data-nav="calendar"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>Calendar</span></a>
+    <a href="#/cowrites" data-nav="cowrites"><svg viewBox="0 0 24 24"><circle cx="8" cy="9" r="3"/><circle cx="16" cy="9" r="3"/><path d="M3 19c.6-3 2.6-5 5-5s4.4 2 5 5M11 19c.6-3 2.6-5 5-5s4.4 2 5 5"/></svg><span>Cowrites</span></a>
+    <a href="#/members" data-nav="members"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-4 3.6-6 7-6s6.2 2 7 6"/></svg><span>Members</span></a>
+    <a href="#/map" data-nav="map"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c3 3 3 14 0 17M12 3.5c-3 3-3 14 0 17"/></svg><span>Map</span></a>
+    <a href="#/stave" data-nav="stave"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 9.5h18M3 13h18M3 16.5h18M3 20h18"/><ellipse cx="15" cy="9.5" rx="2.6" ry="1.9" fill="currentColor"/></svg><span>5 Keys</span></a>
+    <a href="#/academy" data-nav="academy"><svg viewBox="0 0 24 24"><path d="M3 6c3-1 6-1 9 1 3-2 6-2 9-1v13c-3-1-6-1-9 1-3-2-6-2-9-1z"/><path d="M12 7v13"/></svg><span>Academy</span></a>
+    <span class="side-gap"></span>
+    <a href="#/admin" data-nav="admin" class="side-admin"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><span>Admin</span></a>
+    <a href="#/me" data-nav="me"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="10" r="3"/><path d="M6.5 18c1.3-2 3.2-3 5.5-3s4.2 1 5.5 3"/></svg><span>Profile</span></a>
+    <a href="../room.html" class="side-out"><svg viewBox="0 0 24 24"><path d="M14 4h6v16h-6M10 8l-4 4 4 4M6 12h10"/></svg><span>Website</span></a>
+  </nav>
+
+  <div class="main">
+    <header class="top">
+      <p class="top-title" id="topTitle">The Room</p>
+      <div class="top-actions">
+        <div class="bell-wrap">
+          <button class="icon-btn" id="bellBtn" type="button" aria-label="Notifications" aria-expanded="false">
+            <svg viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15zM10 20a2 2 0 0 0 4 0"/></svg>
+            <i class="badge-dot" id="bellDot" hidden></i>
+          </button>
+          <div class="bell-panel" id="bellPanel" hidden></div>
+        </div>
+        <a class="avatar-link" href="#/me" id="meAvatar" aria-label="Your profile"></a>
+      </div>
+    </header>
+    <main id="view" tabindex="-1"></main>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="../assets/config.js"></script>
+<script src="../assets/flags.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="data.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="core.js"></script>
+<script src="api.js"></script>
+<script src="features/messages.js"></script>
+<script src="features/audio.js"></script>
+<script src="features/livelyrics.js"></script>
+<script src="features/circles.js"></script>
+<script src="features/events.js"></script>
+<script src="features/referrals.js"></script>
+<script src="features/profiles.js"></script>
+<script src="features/booth.js"></script>
+<script src="features/ledger.js"></script>
+<script src="features/pitch.js"></script>
+<script src="features/writingroom.js"></script>
+<script src="features/smartpairing.js"></script>
+<script src="features/portfolio.js"></script>
+<script src="features/asiafirst.js"></script>
+<script src="features/houseaccount.js"></script>
+<script src="features/mentors.js"></script>
+<script src="../assets/where-you-stand.js"></script>
+<script src="../assets/shelf.js"></script>
+<script src="features/standing.js"></script>
+<script src="features/credits.js"></script>
+<script src="features/shelf.js"></script>
+<script src="features/letters.js"></script>
+<script src="app.js"></script>
+<script src="../assets/pwa.js"></script>
+</body>
+</html>

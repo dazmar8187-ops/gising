@@ -1,0 +1,9 @@
+/* Live (GHL) mode: sign in by email instead of the demo sign-up and sample accounts. */
+.mode-ghl .demo-ribbon,
+.mode-ghl .gate-card form[data-form="signup"],
+.mode-ghl .gate-card .sample-logins,
+.mode-ghl [data-act="sign-others"]{display:none!important}
+.ghl-login{display:grid;gap:12px;width:100%}
+.ghl-login-msg{font-family:var(--mono);font-size:.82rem;min-height:1.3em;color:color-mix(in srgb,var(--paper) 80%,var(--ink))}
+.ghl-login-note{font-size:.92rem;color:color-mix(in srgb,var(--paper) 70%,var(--ink))}
+.ghl-login-note a{color:var(--sun)}

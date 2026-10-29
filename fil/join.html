@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="fil">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sumali sa Gising Sining House</title>
+<meta name="description" content="Sumali sa founding season ng online songwriting room. Libre, hindi kailangan ng card.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/flagpages.css">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../assets/icons/icon.svg" type="image/svg+xml">
+<link rel="manifest" href="../manifest.webmanifest">
+<meta name="theme-color" content="#2D47B8">
+<link rel="canonical" href="https://gising.netlify.app/fil/join.html">
+<link rel="alternate" hreflang="en" href="https://gising.netlify.app/join.html">
+<link rel="alternate" hreflang="fil" href="https://gising.netlify.app/fil/join.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gising Sining House">
+<meta property="og:title" content="Sumali sa Gising Sining House">
+<meta property="og:description" content="Sumali sa founding season ng online songwriting room. Libre, hindi kailangan ng card.">
+<meta property="og:url" content="https://gising.netlify.app/fil/join.html">
+<meta property="og:locale" content="fil_PH">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+<a class="skip" href="#main">Lumaktaw sa nilalaman</a>
+<p class="fil-note" data-flag="filipino" hidden>Salin ito. Kung may mali, sabihan kami. · <a href="../join.html" lang="en">Read this in English</a></p>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Gising Sining House, home">
+      <svg width="26" height="22" viewBox="0 0 26 22" aria-hidden="true"><g stroke="currentColor" stroke-width="1.6"><path d="M0 2h26M0 6.5h26M0 11h26M0 15.5h26M0 20h26"/></g><circle cx="17" cy="11" r="3.6" fill="var(--accent)"/></svg>
+      <span data-brand>Gising Sining House</span>
+    </a>
+    <a class="btn ghost" href="index.html">Bumalik sa bahay</a>
+  </div>
+</header>
+
+<main class="flag-closed" data-flag-off="filipino" hidden>
+  <div class="wrap">
+    <p class="eyebrow">Filipino</p>
+    <h1>Hindi pa bukas ang pahinang ito.</h1>
+    <p lang="en">This page isn't open yet. The English version is ready.</p>
+    <a class="btn" href="../join.html" lang="en">Read it in English</a>
+  </div>
+</main>
+
+<main id="main" data-flag="filipino" hidden>
+  <div class="page">
+  <div class="wrap page-grid">
+    <div>
+      <p class="eyebrow">Founding season · libre hanggang <span data-founding-ends>31 March 2027</span></p>
+      <h1>Halika, sumulat tayo.</h1>
+      <p class="lede">Walang card, walang daya. Sumali sa online room habang itinatayo pa ito, tumulong hubugin, at mauna sa lahat ng susunod.</p>
+      <div class="gets">
+        <div><b>E</b><p>Writing prompt tuwing Lunes, at lugar para i-post ang ginawa mo</p></div>
+        <div><b>G</b><p>Cowrite matching kasama ang mga manunulat sa Manila, Asia at iba pa</p></div>
+        <div><b>B</b><p>Live na feedback round buwan-buwan, sa oras na bagay sa Asia at sa US</p></div>
+        <div><b>D</b><p>Maiikling aralin tungkol sa splits, publishing at pagkita sa isinusulat mo</p></div>
+        <div><b>F</b><p>Unang access sa bahay sa Manila, sa camps at sa Bali trips</p></div>
+      </div>
+      <p class="note-small">Maririnig mo muna mula sa amin bago may magbago, at pwede kang umalis anumang oras.</p>
+    </div>
+    <form class="form" id="joinForm" novalidate>
+      <div class="field">
+        <label for="firstName">Pangalan</label>
+        <input id="firstName" name="first_name" type="text" autocomplete="given-name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="country">Saan ka nakatira</label>
+        <select id="country" name="country" required>
+          <option value="">Pumili…</option>
+        </select>
+      </div>
+      <fieldset class="field">
+        <legend>Edad mo</legend>
+        <div class="choices">
+          <label><input type="radio" name="age_band" value="18+"> 18 pataas</label>
+          <label><input type="radio" name="age_band" value="16-17"> 16 o 17</label>
+        </div>
+        <small>Hindi pa kami makatatanggap ng wala pang 16 taong gulang.</small>
+      </fieldset>
+      <div class="field" id="jGuardianField" hidden>
+        <label for="guardian">Email ng magulang o tagapag-alaga</label>
+        <input id="guardian" name="guardian_email" type="email" autocomplete="off">
+        <small>Mag-e-email kami sa kanila para humingi ng pahintulot bago magsimula ang anuman. Tingnan ang <a href="../terms.html#young">mga patakaran para sa mga manunulat na 16 at 17 taong gulang</a>.</small>
+      </div>
+      <fieldset class="field">
+        <legend>Nasaan ka bilang manunulat</legend>
+        <div class="choices">
+          <label><input type="radio" name="writer_stage" value="starting" required> Nagsisimula pa lang. May mga ideya at piraso ako</label>
+          <label><input type="radio" name="writer_stage" value="finished-a-few"> Nakatapos na ako ng ilang kanta</label>
+          <label><input type="radio" name="writer_stage" value="writing-regularly"> Regular akong sumusulat at gusto kong gumaling pa</label>
+          <label><input type="radio" name="writer_stage" value="working"> Sumusulat o naglalabas na ako ng musika bilang trabaho, kahit bahagi lang</label>
+        </div>
+      </fieldset>
+      <fieldset class="field">
+        <legend>Ano ang ginagawa mo sa room (pumili ng kahit ilan)</legend>
+        <div class="choices">
+          <label><input type="checkbox" name="roles" value="lyrics"> Lyrics</label>
+          <label><input type="checkbox" name="roles" value="melody"> Melody / topline</label>
+          <label><input type="checkbox" name="roles" value="guitar-keys"> Gitara o keys</label>
+          <label><input type="checkbox" name="roles" value="production"> Production / beats</label>
+          <label><input type="checkbox" name="roles" value="artist"> Artist ako na sumusulat para sa sarili ko</label>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label for="interest">Gusto kong sumulat sa</label>
+        <select id="interest" name="interest">
+          <option value="online">Online room</option>
+          <option value="manila">Online room at sa bahay sa Manila</option>
+          <option value="bali">Online room at sa Bali camps</option>
+          <option value="all">Lahat</option>
+        </select>
+      </div>
+      <label class="consent"><input type="checkbox" id="consent" name="consent" value="yes" required> I-email ako tungkol sa community, prompts at camps. Pwede akong mag-unsubscribe anumang oras. Tingnan ang <a href="../privacy.html">privacy policy</a>.</label>
+      <label class="consent"><input type="checkbox" id="agree" name="agree" value="yes" required> Sumasang-ayon ako sa <a href="../member-agreement.html">member agreement</a> at sa <a href="../terms.html">terms of membership</a>.</label>
+      <p class="err" id="formErr" hidden></p>
+      <p class="preview" id="previewNote" hidden>Preview mode: hindi pa nakakonekta sa GoHighLevel ang join form, kaya walang nase-save.</p>
+      <button class="btn" type="submit" id="joinBtn">Sumali nang libre</button>
+      <p class="note-small" lang="en" style="margin-top:0">Error messages in the form are in English for now.</p>
+    </form>
+  </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-brand"><span>© 2026 <span data-brand>Gising Sining House</span> · Manila</span><span>Sumulat kasama ang iba. Tapusin ang kanta.</span></div>
+    <nav class="footer-links" aria-label="Footer">
+      <ul><li><a href="room.html">Ang Room</a></li><li><a href="camps.html">Mga camp</a></li><li><a href="../services.html">Services (English)</a></li><li><a href="../about.html">Tungkol sa amin (English)</a></li><li><a href="join.html">Sumali nang libre</a></li></ul>
+      <ul><li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li><li><a href="../camp-terms.html">Camp terms</a></li><li><a href="../community.html">Community guidelines</a></li><li><a href="../member-agreement.html">Member agreement</a></li></ul>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/config.js"></script>
+<script src="../assets/flags.js"></script>
+<script src="../assets/flag-links.js"></script>
+<script src="../assets/analytics.js"></script>
+<script src="../assets/newsletter.js"></script>
+<script src="../assets/pwa.js"></script>
+<script src="../assets/join.js"></script>
+
+</body>
+</html>

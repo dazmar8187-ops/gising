@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact · Gising Sining House</title>
+<meta name="description" content="Get in touch with Gising Sining House about membership, camps, services, brands or press.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<!-- sh:head -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#2D47B8">
+<link rel="canonical" href="https://gising.netlify.app/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gising Sining House">
+<meta property="og:title" content="Contact · Gising Sining House">
+<meta property="og:description" content="Get in touch with Gising Sining House about membership, camps, services, brands or press.">
+<meta property="og:url" content="https://gising.netlify.app/contact.html">
+<meta property="og:image" content="https://gising.netlify.app/assets/og/gising-sining-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_PH">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact · Gising Sining House">
+<meta name="twitter:description" content="Get in touch with Gising Sining House about membership, camps, services, brands or press.">
+<meta name="twitter:image" content="https://gising.netlify.app/assets/og/gising-sining-default.png">
+<!-- /sh:head -->
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg width="26" height="22" viewBox="0 0 26 22" aria-hidden="true"><g stroke="currentColor" stroke-width="1.6"><path d="M0 2h26M0 6.5h26M0 11h26M0 15.5h26M0 20h26"/></g><circle cx="17" cy="11" r="3.6" fill="var(--accent)"/></svg><span data-brand>Gising Sining House</span></a>
+    <ul>
+      <li><a href="room.html">The Room</a></li>
+      <li><a href="camps.html">Camps</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="mentors.html">Mentors</a></li>
+    </ul>
+    <div class="nav-actions"><a class="nav-signin" href="app/">Sign in</a><a class="btn" href="join.html">Join free</a></div>
+  </div>
+</header>
+
+<main id="main">
+<div class="page"><div class="wrap page-grid">
+  <div>
+    <p class="eyebrow">Contact</p>
+    <h1>Talk to the house.</h1>
+    <p class="lede">Questions about the Room, camps, services or working with us. Darryl reads every message.</p>
+    <ul class="channels" id="channels"></ul>
+    <p class="note-small" id="noChannels">Direct contact details are being set up. Use the form for now.</p>
+    <div class="faq-links"><p class="eyebrow">Quick answers</p>
+      <ul class="ticks"><li><a href="index.html#faq">Before you join</a></li><li><a href="room.html#room-faq">About the Room</a></li><li><a href="camps.html#camp-faq">About camps</a></li><li><a href="services.html">Reviews and sessions</a></li></ul>
+    </div>
+  </div>
+  <form class="form" id="contactForm" novalidate>
+    <div class="field"><label for="cfName">Your name</label><input id="cfName" name="first_name" type="text" autocomplete="name" required></div>
+    <div class="field"><label for="cfEmail">Email</label><input id="cfEmail" name="email" type="email" autocomplete="email" required></div>
+    <div class="field"><label for="cfTopic">What it's about</label>
+      <select id="cfTopic" name="topic"><option value="membership">Membership and the Room</option><option value="camps">Camps</option><option value="services">Reviews and sessions</option><option value="brands">Brands and teams</option><option value="press">Press</option><option value="other">Something else</option></select></div>
+    <div class="field"><label for="cfMsg">Message</label><textarea id="cfMsg" name="message" rows="5" maxlength="2000" required></textarea></div>
+    <label class="consent"><input type="checkbox" id="cfConsent" name="consent" value="yes" required> <span>Reply to me by email. See the <a href="privacy.html">privacy policy</a>.</span></label>
+    <p class="err" id="cfErr" hidden></p>
+    <p class="preview" id="cfPreview" hidden>Preview mode: this form isn't connected to GoHighLevel yet, so nothing is saved.</p>
+    <button class="btn" type="submit" id="cfBtn">Send message</button>
+    <p class="sent-msg" id="cfSent" hidden role="status">Thanks. We'll reply by email, usually within two working days.</p>
+  </form>
+</div></div>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-brand"><span>© 2026 <span data-brand>Gising Sining House</span> · Manila</span><span>Write with People, Finish the Song</span></div>
+    <nav class="footer-links" aria-label="Footer">
+      <ul><li><a href="room.html">The Room</a></li><li><a href="camps.html">Camps</a></li><li><a href="services.html">Services</a></li><li><a href="academy.html">Academy</a></li><li><a href="about.html">About</a></li><li><a href="mentors.html">Mentors</a></li><li><a href="contact.html">Contact</a></li><li><a href="join.html">Join free</a></li></ul>
+      <ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="camp-terms.html">Camp terms</a></li><li><a href="community.html">Community guidelines</a></li><li><a href="member-agreement.html">Member agreement</a></li></ul>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/config.js"></script>
+<!-- sh:scripts -->
+<script src="assets/flags.js"></script>
+<script src="assets/flag-links.js"></script>
+<script src="assets/analytics.js"></script>
+<script src="assets/newsletter.js"></script>
+<script src="assets/pwa.js"></script>
+<!-- /sh:scripts -->
+<script>
+(function () {
+  var H = window.HOUSE || {}, c = H.contact || {}, url = (H.ghl || {}).webhookUrl || "";
+  var list = document.getElementById("channels"), any = false;
+  var items = [["email", "Email", function (v) { return "mailto:" + v; }], ["messenger", "Messenger", function (v) { return /^https?:/.test(v) ? v : "https://m.me/" + v; }],
+    ["viber", "Viber", function (v) { return /^viber:|^https?:/.test(v) ? v : ""; }], ["whatsapp", "WhatsApp", function (v) { return /^https?:/.test(v) ? v : "https://wa.me/" + v.replace(/\D/g, ""); }],
+    ["instagram", "Instagram", function (v) { return /^https?:/.test(v) ? v : "https://instagram.com/" + v.replace(/^@/, ""); }], ["facebook", "Facebook", function (v) { return /^https?:/.test(v) ? v : "https://facebook.com/" + v; }]];
+  items.forEach(function (it) {
+    var v = c[it[0]]; if (!v) return; any = true;
+    var li = document.createElement("li"), b = document.createElement("b"), a = document.createElement("a"), href = it[2](v);
+    b.textContent = it[1]; li.appendChild(b);
+    if (href) { a.href = href; a.textContent = v; if (!/^mailto:/.test(href)) { a.target = "_blank"; a.rel = "noopener"; } li.appendChild(a); } else { var s = document.createElement("span"); s.textContent = v; li.appendChild(s); }
+    list.appendChild(li);
+  });
+  list.hidden = !any; document.getElementById("noChannels").hidden = any;
+  var f = document.getElementById("contactForm"), err = document.getElementById("cfErr"), btn = document.getElementById("cfBtn");
+  if (!url) document.getElementById("cfPreview").hidden = false;
+  function fail(m, el) { err.textContent = m; err.hidden = false; if (el) el.focus(); }
+  f.addEventListener("submit", function (e) {
+    e.preventDefault(); err.hidden = true;
+    if (!f.first_name.value.trim()) return fail("Add your name.", f.first_name);
+    if (!f.email.value || !f.email.checkValidity()) return fail("That email doesn't look right.", f.email);
+    if (!f.message.value.trim()) return fail("Add a message.", f.message);
+    if (!f.consent.checked) return fail("Tick the box so we can reply.", f.consent);
+    var data = new URLSearchParams({ form_type: "contact", first_name: f.first_name.value.trim(), email: f.email.value.trim(), topic: f.topic.value, message: f.message.value.trim(),
+      consent: "yes", privacy_version: (H.legal || {}).privacyVersion || "", source: "contact-page", sent_at: new Date().toISOString() });
+    var done = function () { Array.prototype.forEach.call(f.querySelectorAll(".field, .consent, #cfBtn, #cfPreview"), function (x) { x.hidden = true; }); document.getElementById("cfSent").hidden = false; if (window.track) window.track("Contact"); };
+    if (!url) { done(); return; }
+    btn.disabled = true; btn.textContent = "Sending…";
+    fetch(url, { method: "POST", mode: "no-cors", body: data }).then(done, function () { btn.disabled = false; btn.textContent = "Send message"; fail("We couldn't send that. Check your connection and try again."); });
+  });
+})();
+</script>
+</body>
+</html>

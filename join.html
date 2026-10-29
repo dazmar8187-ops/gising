@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Join Gising Sining House</title>
+<meta name="description" content="Join the founding season of the online songwriting room. Free, no card needed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<!-- sh:head -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#2D47B8">
+<link rel="canonical" href="https://gising.netlify.app/join.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gising Sining House">
+<meta property="og:title" content="Join Gising Sining House">
+<meta property="og:description" content="Join the founding season of the online songwriting room. Free, no card needed.">
+<meta property="og:url" content="https://gising.netlify.app/join.html">
+<meta property="og:image" content="https://gising.netlify.app/assets/og/gising-sining-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_PH">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Join Gising Sining House">
+<meta name="twitter:description" content="Join the founding season of the online songwriting room. Free, no card needed.">
+<meta name="twitter:image" content="https://gising.netlify.app/assets/og/gising-sining-default.png">
+<!-- /sh:head -->
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg width="26" height="22" viewBox="0 0 26 22" aria-hidden="true"><g stroke="currentColor" stroke-width="1.6"><path d="M0 2h26M0 6.5h26M0 11h26M0 15.5h26M0 20h26"/></g><circle cx="17" cy="11" r="3.6" fill="var(--accent)"/></svg>
+      <span data-brand>Gising Sining House</span>
+    </a>
+    <a class="btn ghost" href="index.html">Back to the house</a>
+  </div>
+</header>
+
+<main id="main" class="page">
+  <div class="wrap page-grid">
+    <div>
+      <p class="eyebrow">Founding season · free until <span data-founding-ends>31 March 2027</span></p>
+      <h1>Come write with us.</h1>
+      <p class="lede">No card, no catch. Join the online room while it's being built, help shape it, and get first access to everything that comes next.</p>
+      <div class="gets">
+        <div><b>E</b><p>A writing prompt every Monday, and a place to post what you made</p></div>
+        <div><b>G</b><p>Cowrite matching with writers in Manila, Asia and beyond</p></div>
+        <div><b>B</b><p>A live feedback round each month, with times that work in Asia and the US</p></div>
+        <div><b>D</b><p>Short lessons on splits, publishing and getting paid for what you write</p></div>
+        <div><b>F</b><p>First access to the Manila house, camps and the Bali trips</p></div>
+      </div>
+      <p class="note-small">You'll hear from us before anything changes, and you can leave at any time.</p>
+    </div>
+
+    <form class="form" id="joinForm" novalidate>
+      <div class="field">
+        <label for="firstName">First name</label>
+        <input id="firstName" name="first_name" type="text" autocomplete="given-name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="country">Where you live</label>
+        <select id="country" name="country" required>
+          <option value="">Choose…</option>
+        </select>
+      </div>
+      <fieldset class="field">
+        <legend>Your age</legend>
+        <div class="choices">
+          <label><input type="radio" name="age_band" value="18+"> 18 or over</label>
+          <label><input type="radio" name="age_band" value="16-17"> 16 or 17</label>
+        </div>
+        <small>We can't accept anyone under 16 yet.</small>
+      </fieldset>
+      <div class="field" id="jGuardianField" hidden>
+        <label for="guardian">Parent or guardian's email</label>
+        <input id="guardian" name="guardian_email" type="email" autocomplete="off">
+        <small>We'll email them for consent before anything starts. See the <a href="terms.html#young">rules for writers aged 16 and 17</a>.</small>
+      </div>
+      <fieldset class="field">
+        <legend>Where you are as a writer</legend>
+        <div class="choices">
+          <label><input type="radio" name="writer_stage" value="starting" required> Just starting. I have ideas and fragments</label>
+          <label><input type="radio" name="writer_stage" value="finished-a-few"> I've finished a few songs</label>
+          <label><input type="radio" name="writer_stage" value="writing-regularly"> I write regularly and want to get better</label>
+          <label><input type="radio" name="writer_stage" value="working"> I already write or release music for a living, at least in part</label>
+        </div>
+      </fieldset>
+      <fieldset class="field">
+        <legend>What you do in a room (choose any)</legend>
+        <div class="choices">
+          <label><input type="checkbox" name="roles" value="lyrics"> Lyrics</label>
+          <label><input type="checkbox" name="roles" value="melody"> Melody / topline</label>
+          <label><input type="checkbox" name="roles" value="guitar-keys"> Guitar or keys</label>
+          <label><input type="checkbox" name="roles" value="production"> Production / beats</label>
+          <label><input type="checkbox" name="roles" value="artist"> I'm an artist writing for myself</label>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label for="interest">I'd like to write in</label>
+        <select id="interest" name="interest">
+          <option value="online">The online room</option>
+          <option value="manila">The online room and the Manila house</option>
+          <option value="bali">The online room and Bali camps</option>
+          <option value="all">All of it</option>
+        </select>
+      </div>
+      <label class="consent"><input type="checkbox" id="consent" name="consent" value="yes" required> <span>Email me about the community, prompts and camps. I can unsubscribe at any time. See the <a href="privacy.html">privacy policy</a>.</span></label>
+      <label class="consent"><input type="checkbox" id="agree" name="agree" value="yes" required> <span>I agree to the <a href="member-agreement.html">member agreement</a> and the <a href="terms.html">terms of membership</a>.</span></label>
+      <p class="err" id="formErr" hidden></p>
+      <p class="preview" id="previewNote" hidden>Preview mode: the join form isn't connected to GoHighLevel yet, so nothing is saved.</p>
+      <button class="btn" type="submit" id="joinBtn">Join free</button>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-brand"><span>© 2026 <span data-brand>Gising Sining House</span> · Manila</span><span>Write with People, Finish the Song</span></div>
+    <nav class="footer-links" aria-label="Footer">
+      <ul><li><a href="room.html">The Room</a></li><li><a href="camps.html">Camps</a></li><li><a href="services.html">Services</a></li><li><a href="academy.html">Academy</a></li><li><a href="about.html">About</a></li><li><a href="mentors.html">Mentors</a></li><li><a href="contact.html">Contact</a></li><li><a href="join.html">Join free</a></li></ul>
+      <ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="camp-terms.html">Camp terms</a></li><li><a href="community.html">Community guidelines</a></li><li><a href="member-agreement.html">Member agreement</a></li></ul>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/config.js"></script>
+<!-- sh:scripts -->
+<script src="assets/flags.js"></script>
+<script src="assets/flag-links.js"></script>
+<script src="assets/analytics.js"></script>
+<script src="assets/newsletter.js"></script>
+<script src="assets/pwa.js"></script>
+<!-- /sh:scripts -->
+<script src="assets/join.js"></script>
+</body>
+</html>

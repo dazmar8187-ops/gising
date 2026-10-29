@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /app/
+Disallow: /admin/
+Disallow: /feature-flags/
+Disallow: /api/
+Disallow: /welcome.html
+
+Sitemap: https://gising.netlify.app/sitemap.xml

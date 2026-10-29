@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="fil">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ang Room · Gising Sining House</title>
+<meta name="description" content="Ang online room ng Gising Sining House, bukas na ngayon: weekly prompt, cowrite pairings tuwing Martes, live na feedback sa dalawang time zone, at parehong anim na room ng bahay sa Manila.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/camps.css">
+<link rel="stylesheet" href="../assets/room.css">
+<link rel="stylesheet" href="../assets/flagpages.css">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../assets/icons/icon.svg" type="image/svg+xml">
+<link rel="manifest" href="../manifest.webmanifest">
+<meta name="theme-color" content="#2D47B8">
+<link rel="canonical" href="https://gising.netlify.app/fil/room.html">
+<link rel="alternate" hreflang="en" href="https://gising.netlify.app/room.html">
+<link rel="alternate" hreflang="fil" href="https://gising.netlify.app/fil/room.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gising Sining House">
+<meta property="og:title" content="Ang Room · Gising Sining House">
+<meta property="og:description" content="Ang online room ng Gising Sining House, bukas na ngayon: weekly prompt, cowrite pairings tuwing Martes, live na feedback sa dalawang time zone, at parehong anim na room ng bahay sa Manila.">
+<meta property="og:url" content="https://gising.netlify.app/fil/room.html">
+<meta property="og:locale" content="fil_PH">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+<a class="skip" href="#main">Lumaktaw sa nilalaman</a>
+<p class="fil-note" data-flag="filipino" hidden>Salin ito. Kung may mali, sabihan kami. · <a href="../room.html" lang="en">Read this in English</a></p>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Gising Sining House, home">
+      <svg width="26" height="22" viewBox="0 0 26 22" aria-hidden="true"><g stroke="currentColor" stroke-width="1.6"><path d="M0 2h26M0 6.5h26M0 11h26M0 15.5h26M0 20h26"/></g><circle cx="17" cy="11" r="3.6" fill="var(--accent)"/></svg>
+      <span data-brand>Gising Sining House</span>
+    </a>
+    <ul>
+      <li><a href="#map">Sa loob</a></li>
+      <li><a href="#week">Ang linggo mo</a></li>
+      <li><a href="#pairing">The Pairing</a></li>
+      <li><a href="#stave">Ang 5 Keys</a></li>
+      <li><a href="#ladder">Membership</a></li>
+      <li><a href="../app/">Mag-sign in</a></li>
+    </ul>
+    <a class="btn" href="join.html">Sumali nang libre</a>
+  </div>
+</header>
+
+<main class="flag-closed" data-flag-off="filipino" hidden>
+  <div class="wrap">
+    <p class="eyebrow">Filipino</p>
+    <h1>Hindi pa bukas ang pahinang ito.</h1>
+    <p lang="en">This page isn't open yet. The English version is ready.</p>
+    <a class="btn" href="../room.html" lang="en">Read it in English</a>
+  </div>
+</main>
+
+<main id="main" data-flag="filipino" hidden>
+  <div class="hero room-hero">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Ang Room · membership</p>
+        <h1>Isang room na <em>hindi nagsasara.</em></h1>
+        <p class="lede">Ang online room ay ang bahay na pwede mong dalhin. May prompt tuwing Lunes, bagong grupo ng tatlong susulat kasama mo tuwing Martes, tapat na notes buong linggo, at live sessions na inuuna ang oras sa Asia. Parehong anim na room tulad ng bahay sa Manila, na magbubukas sa 2027. Bukas na ngayon ang Room, libre ngayong founding season.</p>
+        <div class="ctas">
+          <a class="btn" href="join.html">Sumali sa founding season, libre</a>
+          <a class="btn ghost" href="../app/">Silipin ang loob ng room</a>
+        </div>
+      </div>
+      <aside class="now" aria-live="polite" aria-label="Ano ang nangyayari ngayon sa room">
+        <p class="eyebrow">Ngayon sa room</p>
+        <div class="clocks">
+          <div><span>Manila</span><b id="clkManila">--:--</b></div>
+          <div><span id="clkYouLabel">Oras mo</span><b id="clkYou">--:--</b></div>
+        </div>
+        <div class="now-row live" id="nowLive" hidden><i class="dot"></i><div><span>Live ngayon</span><b id="nowLiveTitle"></b></div></div>
+        <div class="now-row"><i class="dot quiet"></i><div><span>Susunod</span><b id="nowNext">Nilo-load ang linggo…</b><small id="nowNextWhen"></small></div></div>
+        <div class="now-row"><i class="dot on"></i><div><span>Laging bukas</span><b>Ang Feedback Room at ang Cowrite Board</b></div></div>
+        <p class="now-prompt"><span id="nowPromptLabel">Prompt ngayong linggo</span><b id="nowPrompt">The room you grew up in</b></p>
+      </aside>
+    </div>
+    <div class="wrap">
+      <div class="stave-band" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i>
+        <span class="nh" style="--x:8%;--y:4">E</span>
+        <span class="nh" style="--x:29%;--y:3">G</span>
+        <span class="nh" style="--x:50%;--y:2">B</span>
+        <span class="nh" style="--x:71%;--y:1">D</span>
+        <span class="nh" style="--x:92%;--y:0">F</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="why">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Bakit isa pang songwriting membership</p>
+        <h2 class="h2s">Karamihan sa kanila, library ang binebenta. Room ang gusto kong ibigay.</h2>
+      </div>
+      <div class="prose">
+        <p>Matagal kong tiningnan ang mga songwriting membership na nandiyan. Magagaling ang mga guro ng pinakamahusay sa kanila, at daan-daang oras ang mga aralin. Pero halos lahat ay tumatakbo sa iisang time zone, tinatrato ang cowriting na parang message board, at binibilang ang progreso mo sa posts at likes.</p>
+        <p>Hindi natatapos ng aralin ang kanta. Ang room ang nakakatapos. Mga taong kasama mong sumusulat linggo-linggo, notes na nagsasabi ng totoo, at kalendaryong ginawa para sa Manila, Jakarta at Sydney, hindi lang para sa iisang time zone sa kabilang dulo ng mundo.</p>
+        <p>Kaya ang room na ito ay nakatayo sa sabay-sabay na paggawa, may iskedyul, at ipinapaliwanag ang pera mula sa unang araw. At hindi tulad ng iba, may totoong bahay sa dulo nito.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="map">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Sa loob ng room · 𝄞 E G B D F</p>
+        <h2>Parehong anim na room, online at sa Manila.</h2>
+        <p>Lahat ng nangyayari sa online room ay nasa isa sa anim na room ng bahay. Magbubukas ang bahay sa Manila sa 2027. Hanggang doon, online tumatakbo ang bawat room, at pagpasok mo sa bahay sa unang pagkakataon, alam mo na kung nasaan ang lahat.</p>
+      </div>
+      <div class="map">
+        <article class="map-room"><div class="note clef" aria-label="Clef">𝄞</div><h3>The Living Room</h3><span class="key">Ang clef · Belong</span><div class="map-cols"><div><span>Online</span><p>Introductions, balita ng bahay at listening parties. Dito mo nakikilala ang room bago ka sumulat kasama nila.</p></div><div><span>Sa bahay · simula 2027</span><p>Sala na nagiging listening room tuwing writers' night.</p></div></div></article>
+        <article class="map-room"><div class="note">E</div><h3>The Desk</h3><span class="key">Establish</span><div class="map-cols"><div><span>Online</span><p>Ang weekly prompt, at tahimik na lugar para i-post ang ginawa mo, gaano man ka-rough.</p></div><div><span>Sa bahay · simula 2027</span><p>Writing rooms at open studio days.</p></div></div></article>
+        <article class="map-room"><div class="note">G</div><h3>The Cowrite Room</h3><span class="key">Grow</span><div class="map-cols"><div><span>Online</span><p>Ang Pairing tuwing Martes, at ang Cowrite Board para sa mga "naghahanap ng producer" na post.</p></div><div><span>Sa bahay · simula 2027</span><p>Camp rotations at cowrite days.</p></div></div></article>
+        <article class="map-room"><div class="note">B</div><h3>The Round</h3><span class="key">Book</span><div class="map-cols"><div><span>Online</span><p>Ang Feedback Room araw-araw, at live na Round buwan-buwan, dalawang beses para makadalo ang magkabilang panig ng mundo.</p></div><div><span>Sa bahay · simula 2027</span><p>Writers' night buwan-buwan, 7–10pm.</p></div></div></article>
+        <article class="map-room"><div class="note">D</div><h3>The Booth</h3><span class="key">Deliver</span><div class="map-cols"><div><span>Online</span><p>Demo clinics sa House Session, at ang Pro Desk: isang kanta bawat buwan ang nabibigyan ng notes ng mentor.</p></div><div><span>Sa bahay · simula 2027</span><p>Maliit na studio, may booth time para sa House Members.</p></div></div></article>
+        <article class="map-room"><div class="note">F</div><h3>The Porch</h3><span class="key">Flourish</span><div class="map-cols"><div><span>Online</span><p>Ang Money Side channel (splits, publishing, registration, kita mula sa fans) at Wins.</p></div><div><span>Sa bahay · simula 2027</span><p>Ang kuwentuhan sa gabi, at mga money-side workshop kasama ang visiting mentors.</p></div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="week">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Ang linggo mo sa room</p>
+        <h2>Isang ritmong pwede mong sundan bawat linggo.</h2>
+        <p>Naka-set sa oras ng Manila. Ang column sa kanan ay ang oras sa time zone mo, kinukuwenta ng browser mo. Nire-record ang bawat live session, kaya makakahabol ka kung hindi ka nakadalo.</p>
+      </div>
+      <div class="week" id="weekTable">
+        <div class="week-head"><span>Araw</span><span>Ano ang nangyayari</span><span>Manila</span><span id="youHead">Oras mo</span></div>
+        <noscript><p class="note-small">Lunes 09:00 lalabas ang prompt · Martes 09:00 ang Pairing · Miyerkules 20:00 ang House Session · unang Sabado 10:00 at 20:00 ang Round · Linggo magsasara ang prompt. Lahat sa oras ng Manila.</p></noscript>
+      </div>
+      <p class="note-small">Sinadyang dalawang beses ang Round buwan-buwan: bagay ang 10:00 Manila sa Asia at Australia (Biyernes ng gabi sa Americas), at bagay ang 20:00 Manila sa Europe at umaga sa US. Walang kailangang mag-alarm ng 3am para makasama.</p>
+      <p class="note-small" lang="en">Session names in the table are in English.</p>
+    </div>
+  </section>
+
+  <section id="pairing" class="pairing">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">The Pairing · paghahanap ng kasamang susulat</p>
+        <h2>Bawat linggo, ilalagay ka namin sa grupo ng tatlo para sumulat ng isang kanta.</h2>
+        <p>Pinakamabilis kang gagaling kapag may kasama kang sumusulat, pero mahirap hanapin ang tamang tao. Kaya tuwing Martes, itinatapat ka ng room sa dalawang manunulat na tugma sa galing mo. Isang kanta ang isusulat ninyo sa linggong iyon. Kung hindi ka makakasali, laktawan mo lang.</p>
+      </div>
+      <ol class="pair-steps">
+        <li><b>1</b><h3>Sabihin kung saan ka magaling</h3><p>Lyrics, melody, pagtugtog, o paggawa ng beats at tracks. Idagdag ang mga wikang sinusulatan mo, ang mga istilong gusto mo at kung saan ka nakatira. Isang beses mo lang ito gagawin.</p></li>
+        <li><b>2</b><h3>Sabihing "I'm in" para sa linggo</h3><p>Bago matapos ang Lunes ng gabi, i-tick ang box kung may oras kang sumulat. Busy? Huwag i-tick at hindi ka itatapat.</p></li>
+        <li><b>3</b><h3>Kilalanin ang grupo mo sa Martes</h3><p>Isasama ka sa dalawang manunulat na pupuno sa kulang mo at gising sa parehong oras. May kasama ring ideya ng kanta para may simula kayo.</p></li>
+        <li><b>4</b><h3>Pagkasunduan ang hatian, tapos sumulat</h3><p>Bago magsimula, pipirma kayong tatlo sa maikling form tungkol sa hatian ng kanta: tig-30%, at 10% sa bahay. Tapos isusulat ninyo, at ipo-post sa room para sa feedback.</p></li>
+      </ol>
+      <div class="pair-card" aria-label="Halimbawa ng grupo">
+        <p class="eyebrow">Halimbawa · ganito ang mensahe tuwing Martes</p>
+        <div class="pair-trio">
+          <div><b>Lyrics</b><span>Manunulat sa Quezon City · sumusulat sa Taglish</span></div>
+          <div><b>Melody</b><span>Manunulat sa Jakarta · English at Bahasa</span></div>
+          <div><b>Music at beat</b><span>Producer sa Melbourne · English</span></div>
+        </div>
+        <p><b>Kailan kayo magkikita:</b> Huwebes, 7–9pm oras ng Manila, online.</p>
+        <p><b>Ideya ng kanta:</b> isang paalam sa airport, mula sa taong naiwan.</p>
+        <p class="small">Kasama ang ownership form: tig-30%, 10% sa bahay. Sa 'yo ang buong writer's share.</p>
+      </div>
+      <div class="share">
+        <div>
+          <h3>Paano hinahati ang bawat kanta</h3>
+          <p>Pareho ang hatian ng bawat kantang sabay-sabay na isinulat sa Room o sa camp. Sa 'yo ang buong writer's share, ang royalties na diretsong ibinabayad sa songwriters. Ang publishing ay 90% sa mga manunulat at 10% sa bahay.</p>
+          <p>Ang 10% ng bahay ang pambayad sa trabaho nito sa bawat kanta: pag-register sa FILSCAP o sa society mo, pag-aayos ng papeles, at pag-pitch ng pinakamagagandang kanta sa artists, brands at sync. Kumikita lang ang bahay kapag kumikita ang kanta mo. Ang mga kantang mag-isa mong isinulat ay 100% sa 'yo.</p>
+          <p class="note-small">Bakit pipirma muna? Dahil ang "aayusin na lang natin mamaya" ang sumisira sa pagkakaibigan at sa kanta.</p>
+        </div>
+        <div class="share-bar" role="img" aria-label="Hatian ng publishing: tatlong manunulat na tig-30%, at 10% sa bahay">
+          <span style="--w:30"><b>30%</b>Manunulat</span>
+          <span style="--w:30"><b>30%</b>Manunulat</span>
+          <span style="--w:30"><b>30%</b>Manunulat</span>
+          <span class="house" style="--w:10"><b>10%</b>Bahay</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stave">
+    <div class="wrap split stave-split">
+      <div>
+        <p class="eyebrow">Ang 5 Keys · progreso na may saysay</p>
+        <h2 class="h2s">Ingay ang binibilang ng leaderboard. Tapos na gawa ang binibilang ng 5 Keys.</h2>
+        <p>Ang points sa pagpo-post ay pabor sa pinakamaingay sa room. Gumagalaw lang ang progreso mo sa 5 Keys kapag may ginawa kang mahalaga sa career: natapos na kanta, pinirmahang split, na-register, napatugtog sa tao, nailabas.</p>
+        <p style="margin-top:1em">Sampung milestone sa limang Keys. Walang ibang nakakakita ng sa 'yo maliban kung ibahagi mo. Mag-tick ng ilan para makita kung paano umaakyat.</p>
+        <p class="note-small" id="staveCount">0 of 10 milestones</p>
+      </div>
+      <div class="mystave" id="myStave">
+        <div class="mystave-note" id="staveNote" aria-hidden="true"></div>
+        <fieldset class="line" data-line="4"><legend><b>F</b> Flourish</legend>
+          <label><input type="checkbox"> Maglabas o mag-pitch ng kanta na ayos ang lahat ng split</label>
+          <label><input type="checkbox"> Kumita sa unang pagkakataon mula sa kantang isinulat mo</label>
+        </fieldset>
+        <fieldset class="line" data-line="3"><legend><b>D</b> Deliver</legend>
+          <label><input type="checkbox"> Gawing tapos na demo ang isang voice memo</label>
+          <label><input type="checkbox"> Kumuha ng Pro Desk notes at i-post ang rewrite</label>
+        </fieldset>
+        <fieldset class="line" data-line="2"><legend><b>B</b> Book</legend>
+          <label><input type="checkbox"> Tumugtog ng kanta sa live na Round</label>
+          <label><input type="checkbox"> Tumugtog sa writers' night, online o sa bahay</label>
+        </fieldset>
+        <fieldset class="line" data-line="1"><legend><b>G</b> Grow</legend>
+          <label><input type="checkbox"> Sumulat ng tatlong kanta sa Pairing, may pinirmahang hatian</label>
+          <label><input type="checkbox"> Magbigay ng kapaki-pakinabang na notes sa dalawampung kanta</label>
+        </fieldset>
+        <fieldset class="line" data-line="0"><legend><b>E</b> Establish</legend>
+          <label><input type="checkbox"> Mag-post sa apat na sunod-sunod na prompt</label>
+          <label><input type="checkbox"> Mag-register ng kanta sa FILSCAP o sa society mo</label>
+        </fieldset>
+      </div>
+    </div>
+  </section>
+
+  <section id="notes">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Notes na nakakatulong</p>
+        <h2 class="h2s">Mabait at tapat, pareho. Sa format na magagamit mo.</h2>
+        <p>Hindi nakakatulong ang "Ang ganda!", pati na rin ang pambabanat. Iisa ang hugis ng bawat note sa room, kaya mabilis ibigay at madaling sundan.</p>
+        <ul class="ticks" style="margin-top:20px">
+          <li><b>Magbigay ng dalawa, tumanggap ng isa.</b> Mag-reply sa dalawang kanta para sa bawat kantang ipo-post mo. Ganyan nananatiling patas ang Feedback Room.</li>
+          <li><b>Ang Pro Desk.</b> Isang beses bawat buwan, ipakita ang isang kanta sa mentor ng bahay para sa nakasulat na notes. Gusto mo ng buong video review? Tingnan ang <a href="../services.html#reviews">Song Reviews</a>.</li>
+          <li><b>Ang live na Round.</b> Patugtugin, pakinggan ang reaksyon ng room, at kumuha ng notes agad-agad.</li>
+        </ul>
+      </div>
+      <div class="note-card" aria-label="Halimbawang note">
+        <p class="eyebrow">Halimbawang note · "Jeepney Window"</p>
+        <div><span>Works</span><p>Sa ikalawang verse, pinangalanan ang mismong babaan. Nasa jeep na iyon ako.</p></div>
+        <div><span>Try</span><p>1:10 dumarating ang chorus. Tanggalin ang ikalawang bahagi ng verse one para umabot sa 0:45.</p></div>
+        <div><span>Question</span><p>Sino ang naghihintay sa dulo ng ruta? Gustong sabihin ng kanta.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="circles" class="offer circles">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Circles · sa pamamagitan ng aplikasyon · magbubukas sa 2027</p>
+        <h2>Maliliit na room para sa market na gusto mong sulatan.</h2>
+        <p>Kapag nakakatapos ka na ng mga kanta, mag-apply sa isang Circle: hanggang labindalawang manunulat at isang mentor na nagtatrabaho sa market na iyon. May totoong brief bawat buwan, notes mula sa taong bumibili ng kanta, at pitch kapag handa na ang kanta. Walang makakapangako ng placement. Ang pangako ng Circle: maririnig ng tamang tao ang pinakamaganda mong gawa.</p>
+      </div>
+      <div class="circle-grid">
+        <article><h3>OPM &amp; Ballad</h3><p>Filipino pop at ang malalaking ballad, sa Filipino, English o pareho.</p></article>
+        <article><h3>P-pop &amp; Topline</h3><p>Hooks at toplines para sa mga grupo sa buong Asia, isinulat sa totoong track briefs.</p></article>
+        <article><h3>Sync &amp; Brand</h3><p>Musika para sa ads, TV, pelikula at games sa Asian market, isinulat sa totoong briefs.</p></article>
+        <article><h3>Worship</h3><p>Mga kantang pang-congregation na kaya talagang kantahin tuwing Linggo.</p></article>
+        <article><h3>Artist Circle</h3><p>Para sa mga manunulat na naglalabas ng sariling musika: ang mga kanta, ang release plan at ang unang fans.</p></article>
+      </div>
+      <p class="note-small">Iaanunsyo ang mentors ng bawat Circle sa Enero 2027. Nag-a-apply ka para gumana ang bawat room.</p>
+    </div>
+  </section>
+
+  <section id="ladder">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Membership · pataas</p>
+        <h2>Magsimula sa room. Umakyat hanggang saan ka dalhin ng mga kanta.</h2>
+        <p>Isang membership sa simula, bukas sa lahat. Ang bawat susunod na hakbang ay nandiyan kapag handa ka na sa higit pa.</p>
+      </div>
+      <ol class="ladder">
+        <li class="rung open"><span class="rung-tag">Bukas na · libreng founding season</span><h3>Online Room</h3><p class="for">Para sa kahit sinong manunulat, kahit saan, na gusto ng habit, ng mga kasama at ng totoo tungkol sa gawa.</p><ul class="ticks"><li>Ang weekly prompt at ang Feedback Room</li><li>Ang Pairing tuwing Martes</li><li>Ang lingguhang House Session at buwanang Round</li><li>Ang Pro Desk, buwan-buwan</li><li>Ang Money Side, at ang 5 Keys</li><li>Unang access sa camps at sa mga bahay</li></ul><a class="btn" href="join.html">Sumali nang libre</a></li>
+        <li class="rung"><span class="rung-tag">Pagbukas ng bahay sa Manila · 2027</span><h3>House Member</h3><p class="for">Para sa mga manunulat na malapit sa bahay, o madalas bumisita.</p><ul class="ticks"><li>Lahat ng nasa Online Room</li><li>Writers' nights at open studio days</li><li>Oras sa booth buwan-buwan</li><li>Unang access sa camps</li></ul><a class="btn ghost" href="join.html">Mauna sa listahan</a></li>
+        <li class="rung"><span class="rung-tag">Sa pamamagitan ng aplikasyon · 2027</span><h3>Circles</h3><p class="for">Para sa members na nakakatapos na ng kanta at alam kung anong market ang sinusulatan.</p><ul class="ticks"><li>Hanggang labindalawang manunulat at isang industry mentor</li><li>Buwanang brief at notes</li><li>Pitch kapag handa na ang kanta</li></ul><a class="btn ghost" href="#circles">Tingnan ang Circles</a></li>
+        <li class="rung"><span class="rung-tag">Sa aplikasyon · pagbukas ng bahay</span><h3>Writer in Residence</h3><p class="for">Para sa iilang manunulat bawat season na kailangan ng mahabang oras sa bahay.</p><ul class="ticks"><li>Kuwarto at mesa para sa takdang residency</li><li>Mga sesyon kasama ang bumibisitang manunulat at producer</li><li>Review ng tapos na kanta kasama ang visiting mentor</li></ul><a class="btn ghost" href="join.html">Magtanong tungkol sa residency</a></li>
+        <li class="rung"><span class="rung-tag">Sa imbitasyon · taon-taon</span><h3>Ang writing trip</h3><p class="for">Para sa advanced members, pinili mula sa Circles at residencies.</p><ul class="ticks"><li>Isang linggong pagsusulat sa ibang music city</li><li>Mga writing session na inayos ng bahay</li></ul></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="promises">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Ang house rules, maikling bersyon</p>
+        <h2>Limang bagay na ipinapangako ko, at hinihiling sa 'yo.</h2>
+      </div>
+      <div class="promises">
+        <div><b>1</b><p><strong>Isang patas na hatian, sa simula pa lang.</strong> Sa 'yo ang buong writer's share. Ang publishing ay 90% sa mga manunulat at 10% sa bahay, sa bawat kantang sabay-sabay na isinulat.</p></div>
+        <div><b>2</b><p><strong>Splits sa mismong araw.</strong> Bawat cowrite ay nagtatapos sa pinirmahang split sheet, kahit rough idea pa lang.</p></div>
+        <div><b>3</b><p><strong>Magpaalam bago mag-share.</strong> Walang nagpo-post, nagpi-pitch o naglalabas ng gawa ng iba nang walang nakasulat na pahintulot.</p></div>
+        <div><b>4</b><p><strong>Walang bentahan sa feed.</strong> Walang playlist schemes, walang "promotion" offers. Ang Wins ay para sa mga release mo.</p></div>
+        <div><b>5</b><p><strong>Ligtas na room.</strong> Walang harassment, poot o pamimilit. Inaaksyunan ng hosts ang bawat report.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="room-faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Mga tanong</p>
+        <h2>Tungkol sa room</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Saan talaga nakatira ang room?</summary><p>Sa isang pribadong community app sa phone mo (iOS at Android) at sa browser mo. Dumarating bilang notifications ang prompts, pairings at notes, kaya umaangkop ang room sa araw mo.</p></details>
+        <details><summary>Hindi ako makakarating sa Manila. Para sa akin pa rin ba ito?</summary><p>Oo. Lahat ng nasa pahinang ito ay gumagana kahit saan. Nandiyan ang bahay kapag handa ka na, hindi ito kondisyon para sumali.</p></details>
+        <details><summary>Nagsisimula pa lang ako. Maiiwan ba ako?</summary><p>Hindi. Ang prompt at ang Feedback Room ay ginawa para sa mga nagsisimula, at sa pinakamababang linya ng 5 Keys nagsisimula ang lahat. Para sa mas huli ang Circles.</p></details>
+        <details><summary>Paano kung hindi ako makadalo sa live sessions?</summary><p>Nire-record at pino-post sa room ang bawat House Session at Round. Buong linggo ang prompt, at sasali ka lang sa Pairing kapag may oras kang sumulat.</p></details>
+        <details><summary>Pwede ba akong sumulat sa Filipino, o sa ibang wika?</summary><p>Oo. Sumulat sa kung anong wika ang gusto ng kanta. Isinasaalang-alang ng Pairing ang mga wika mo kapag bumubuo ng grupo.</p></details>
+        <details><summary>Sino ang may-ari ng isusulat ko sa Pairing?</summary><p>Ikaw at ang mga kasama mo: tig-30%, at 10% sa bahay, nakasulat sa form na pipirmahan ninyong lahat bago magsimula. Sa 'yo ang buong writer's share.</p></details>
+        <details><summary>Bakit 10% sa bahay?</summary><p>Dahil may totoong trabaho ito sa bawat kanta: pag-register sa FILSCAP o sa society mo, pag-iingat ng split sheets, at pag-pitch ng pinakamagagandang kanta sa artists, brands at sync. Kumikita lang ang bahay kapag kumikita ang kanta, kaya may dahilan itong iparinig ang mga kanta mo. Ang mga kantang mag-isa mong isinulat ay 100% sa 'yo.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="nl-sec">
+    <div class="wrap"><div data-newsletter></div></div>
+  </section>
+
+  <section class="join">
+    <div class="wrap">
+      <p class="eyebrow">Founding season</p>
+      <h2>Bukas na ang room. Upo ka.</h2>
+      <p style="margin-top:16px">Libre hanggang <span data-founding-ends>31 March 2027</span>. Hindi kailangan ng card. Lalabas ang unang prompt sa Lunes.</p>
+      <p style="margin-top:28px"><a class="btn" href="join.html">Sumali nang libre</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-brand"><span>© 2026 <span data-brand>Gising Sining House</span> · Manila</span><span>Sumulat kasama ang iba. Tapusin ang kanta.</span></div>
+    <nav class="footer-links" aria-label="Footer">
+      <ul><li><a href="room.html">Ang Room</a></li><li><a href="camps.html">Mga camp</a></li><li><a href="../services.html">Services (English)</a></li><li><a href="../about.html">Tungkol sa amin (English)</a></li><li><a href="join.html">Sumali nang libre</a></li></ul>
+      <ul><li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li><li><a href="../camp-terms.html">Camp terms</a></li><li><a href="../community.html">Community guidelines</a></li><li><a href="../member-agreement.html">Member agreement</a></li></ul>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/config.js"></script>
+<script src="../assets/flags.js"></script>
+<script src="../assets/flag-links.js"></script>
+<script src="../assets/analytics.js"></script>
+<script src="../assets/newsletter.js"></script>
+<script src="../assets/pwa.js"></script>
+<script src="../assets/room.js"></script>
+
+</body>
+</html>

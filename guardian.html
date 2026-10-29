@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parent or guardian consent · Gising Sining House</title>
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#2D47B8">
+<style>
+  /* The only CSS this page adds. Everything else comes from site.css. */
+  .gc-grid{margin-top:32px}
+  .gc-points{display:grid;gap:10px;margin-top:20px}
+  .gc-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .gc-decline{background:none;border:0;padding:0;font:inherit;color:var(--ink-soft);text-decoration:underline;cursor:pointer}
+  .gc-status{margin-top:20px}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg width="26" height="22" viewBox="0 0 26 22" aria-hidden="true"><g stroke="currentColor" stroke-width="1.6"><path d="M0 2h26M0 6.5h26M0 11h26M0 15.5h26M0 20h26"/></g><circle cx="17" cy="11" r="3.6" fill="var(--accent)"/></svg>
+      <span data-brand>Gising Sining House</span>
+    </a>
+    <ul>
+      <li><a href="terms.html#young">Rules for 16 and 17</a></li>
+      <li><a href="privacy.html#young">Privacy</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+<div class="page"><div class="wrap">
+  <p class="eyebrow">Parent or guardian consent</p>
+  <h1 id="gcTitle">Your consent for a young writer.</h1>
+  <p class="lede" id="gcLede">A writer aged 16 or 17 has asked to join Gising Sining House and gave your email as their parent or guardian. Nothing starts until you agree.</p>
+  <p class="preview gc-status" id="gcPreview" hidden>Preview mode: consent isn't connected to GoHighLevel yet, so nothing is saved.</p>
+  <p class="err gc-status" id="gcProblem" hidden></p>
+
+  <div class="page-grid gc-grid" id="gcBody">
+    <div>
+      <h2 class="h2-sm">What you're agreeing to</h2>
+      <ul class="ticks gc-points">
+        <li><b>Safeguarding.</b> In-person sessions for under-18s always have more than one adult present and a trained safeguarding lead. Online one-to-one mentoring happens on house video calls, and you can join any session.</li>
+        <li><b>Checked adults.</b> Mentors who work with under-18s have a background check, references and safeguarding training.</li>
+        <li><b>Private messages.</b> Your child can message other under-18s, the host and mentors. Other adults can't message them privately, and the host can read any conversation with an under-18 in it.</li>
+        <li><b>Privacy.</b> Your child's profile is never public, they aren't shown on the member map, and we don't share their photos or recordings outside the house without your consent.</li>
+        <li><b>Their songs.</b> Your child keeps all of their writer's share. You co-sign the member agreement and any split sheet with them, because under-18s can't sign agreements on their own.</li>
+        <li><b>You stay in control.</b> You can see, correct or delete their information, or withdraw consent, at any time by emailing us.</li>
+      </ul>
+      <p style="margin-top:20px">The full rules are in the <a href="terms.html#young">terms</a>, the <a href="privacy.html#young">privacy policy</a> and the <a href="member-agreement.html">member agreement</a>.</p>
+    </div>
+
+    <form class="form" id="gcForm" novalidate>
+      <div class="field"><label for="gcName">Your full name</label><input id="gcName" name="guardian_name" type="text" autocomplete="name" required></div>
+      <fieldset class="field">
+        <legend>Your relationship to <span data-writer>the writer</span></legend>
+        <div class="choices">
+          <label><input type="radio" name="relationship" value="parent"> Parent</label>
+          <label><input type="radio" name="relationship" value="legal-guardian"> Legal guardian</label>
+        </div>
+      </fieldset>
+      <label class="consent"><input type="checkbox" name="isGuardian"> <span>I'm <span data-writer>the writer</span>'s parent or legal guardian.</span></label>
+      <label class="consent"><input type="checkbox" name="terms"> <span>I've read the <a href="terms.html#young" target="_blank" rel="noopener">terms</a>, including the rules for writers aged 16 and 17, and agree to them.</span></label>
+      <label class="consent"><input type="checkbox" name="agreement"> <span>I agree to co-sign the <a href="member-agreement.html" target="_blank" rel="noopener">member agreement</a> and any split sheet with them.</span></label>
+      <label class="consent"><input type="checkbox" name="privacy"> <span>I've read the <a href="privacy.html#young" target="_blank" rel="noopener">privacy policy</a>.</span></label>
+      <label class="consent"><input type="checkbox" name="join"> <span>I consent to <span data-writer>the writer</span> joining Gising Sining House.</span></label>
+      <div class="field"><label for="gcSign">Sign by typing your full name again</label><input id="gcSign" name="signature" type="text" autocomplete="off" required></div>
+      <p class="err" id="gcErr" hidden></p>
+      <div class="gc-actions">
+        <button class="btn" type="submit" id="gcBtn">Give consent</button>
+        <button class="gc-decline" type="button" id="gcDecline">I don't consent</button>
+      </div>
+    </form>
+  </div>
+  <p class="sent-msg gc-status" id="gcDone" hidden role="status"></p>
+</div></div>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-brand"><span>© 2026 <span data-brand>Gising Sining House</span> · Manila</span><span>Write with People, Finish the Song</span></div>
+    <nav class="footer-links" aria-label="Footer">
+      <ul><li><a href="room.html">The Room</a></li><li><a href="camps.html">Camps</a></li><li><a href="services.html">Services</a></li><li><a href="academy.html">Academy</a></li><li><a href="about.html">About</a></li><li><a href="mentors.html">Mentors</a></li><li><a href="contact.html">Contact</a></li><li><a href="join.html">Join free</a></li></ul>
+      <ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="camp-terms.html">Camp terms</a></li><li><a href="community.html">Community guidelines</a></li><li><a href="member-agreement.html">Member agreement</a></li></ul>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/config.js"></script>
+<script src="assets/guardian.js"></script>
+</body>
+</html>

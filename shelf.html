@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Shelf · Gising Sining House</title>
+<meta name="description" content="Songs written together at Gising Sining House. Pay what you want; every song shows its signed split and exactly where your money goes.">
+<link rel="canonical" href="https://gising.netlify.app/shelf.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Shelf · Gising Sining House">
+<meta property="og:description" content="Songs written in the house. Pay what you want, and see where every peso goes.">
+<meta property="og:url" content="https://gising.netlify.app/shelf.html">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/flagpages.css">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#2D47B8">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg width="26" height="22" viewBox="0 0 26 22" aria-hidden="true"><g stroke="currentColor" stroke-width="1.6"><path d="M0 2h26M0 6.5h26M0 11h26M0 15.5h26M0 20h26"/></g><circle cx="17" cy="11" r="3.6" fill="var(--accent)"/></svg>
+      <span data-brand>Gising Sining House</span>
+    </a>
+    <ul>
+      <li><a href="room.html">The Room</a></li>
+      <li><a href="#songs">The songs</a></li>
+      <li><a href="#rules">How it works</a></li>
+    </ul>
+    <div class="nav-actions"><a class="btn" href="join.html">Join free</a></div>
+  </div>
+</header>
+
+<main class="flag-closed" data-flag-off="the-shelf" hidden>
+  <div class="wrap">
+    <p class="eyebrow">The Shelf</p>
+    <h1>This page isn't open yet.</h1>
+    <p>The Shelf opens when the first songs written in the house are released. Join the Room, free, to hear first.</p>
+    <a class="btn" href="join.html">Join free</a>
+  </div>
+</main>
+
+<main id="main" data-flag="the-shelf" hidden>
+  <div class="fp-hero">
+    <div class="wrap">
+      <p class="eyebrow">The Shelf · songs written in the house</p>
+      <h1>Pay what you want. See where it goes.</h1>
+      <p class="lede">Every song here was written together in the Room or at a camp, and every writer on it has signed the split. Pay what the song is worth to you. Each one shows exactly who gets your money and how much.</p>
+      <div class="ctas"><a class="btn" href="#songs">Hear the songs</a><a class="btn ghost" href="#rules">How the money works</a></div>
+    </div>
+  </div>
+
+  <section id="songs">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">On the shelf</p>
+        <h2>Songs from the house</h2>
+        <p>The shelf fills as songs are released. Until then, the songs below are examples showing how each one will look.</p>
+      </div>
+      <div class="sh-list" id="shList"></div>
+    </div>
+  </section>
+
+  <section id="rules">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How it works</p>
+        <h2>Three rules for the shelf.</h2>
+      </div>
+      <ol class="fp-steps">
+        <li><b>1</b><h3>Signed, or it isn't here</h3><p>A song goes on the shelf only when every writer has signed the split. No signed split, no shelf. That protects the writers, and it protects you.</p></li>
+        <li><b>2</b><h3>The writers get it all</h3><p>Your money goes to the writers in the shares they signed. The house takes nothing from the shelf. Only the card or wallet fee comes off, and it's shown on every song.</p></li>
+        <li><b>3</b><h3>Your name, if you want</h3><p>Tick one box and the writers get your name and email, so they can thank you and tell you when the next song is out. Nobody gets it without that tick.</p></li>
+      </ol>
+      <p class="note-small">This is money from fans, paid straight to writers. It's separate from royalties, which are collected through FILSCAP or each writer's own society.</p>
+    </div>
+  </section>
+
+  <dialog class="sh-dialog" id="shDlg" aria-labelledby="shDlgT">
+    <form class="fp-form" id="shForm" method="dialog" novalidate>
+      <p class="eyebrow" id="shDlgSong"></p>
+      <h2 id="shDlgT">Support this song</h2>
+      <div class="field"><label for="sh-amt">Your amount, in pesos</label><input id="sh-amt" name="amount" type="number" inputmode="decimal" min="1" step="1" placeholder="Any amount"></div>
+      <div class="sh-live" id="shLive" aria-live="polite"></div>
+      <div class="field"><label for="sh-name">First name</label><input id="sh-name" name="first_name" type="text" autocomplete="given-name"></div>
+      <div class="field"><label for="sh-email">Email</label><input id="sh-email" name="email" type="email" autocomplete="email" required></div>
+      <label class="consent"><input type="checkbox" name="share" value="yes"> Let the writers know it was me. They get my name and email, nothing else.</label>
+      <label class="consent"><input type="checkbox" name="consent" value="yes" required> Email me the payment link for this song. See the <a href="privacy.html">privacy policy</a>.</label>
+      <p class="note-small">Payment opens soon. For now we note your support and email you a GCash, Maya or card link for the amount you chose.</p>
+      <p class="preview" id="shPreview" hidden>Preview mode: this form isn't connected to GoHighLevel yet, so nothing is saved.</p>
+      <p class="err" id="shErr" hidden></p>
+      <div class="sh-actions"><button class="btn ghost" type="button" id="shCancel">Cancel</button><button class="btn" type="submit" id="shBtn">Send</button></div>
+      <div class="sent-msg" id="shSent" hidden><p>Thank you. The link is on its way.</p><button class="btn ghost" type="button" id="shDone">Close</button></div>
+    </form>
+  </dialog>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-brand"><span>© 2026 <span data-brand>Gising Sining House</span> · Manila</span><span>Write with People, Finish the Song</span></div>
+    <nav class="footer-links" aria-label="Footer">
+      <ul><li><a href="room.html">The Room</a></li><li><a href="camps.html">Camps</a></li><li><a href="services.html">Services</a></li><li><a href="academy.html">Academy</a></li><li><a href="about.html">About</a></li><li><a href="mentors.html">Mentors</a></li><li><a href="contact.html">Contact</a></li><li><a href="join.html">Join free</a></li></ul>
+      <ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="camp-terms.html">Camp terms</a></li><li><a href="community.html">Community guidelines</a></li><li><a href="member-agreement.html">Member agreement</a></li></ul>
+    </nav>
+  </div>
+</footer>
+<script src="assets/config.js"></script>
+<script src="assets/flags.js"></script>
+<script src="assets/flag-links.js"></script>
+<script src="assets/shelf.js"></script>
+<script>
+(function () {
+  var S = window.HouseShelf, list = document.getElementById("shList"); if (!S || !list) return;
+  list.innerHTML = S.examples.map(function (s) { return S.card(s); }).join("");
+  var dlg = document.getElementById("shDlg"), form = document.getElementById("shForm"), err = document.getElementById("shErr"), live = document.getElementById("shLive");
+  var cfg = window.HOUSE || { ghl: {} }, url = cfg.ghl && (cfg.ghl.bookingWebhookUrl || cfg.ghl.webhookUrl), song = null;
+  if (!url) document.getElementById("shPreview").hidden = false;
+
+  function preview() {
+    var a = Number(form.amount.value);
+    if (!song || !(a > 0)) { live.innerHTML = ""; return; }
+    var b = S.breakdown(song, a);
+    live.innerHTML = "<p>" + b.writers.map(function (w) { return w.name.split(" ")[0] + " gets <b>" + S.money(w.amount) + "</b>"; }).join(", ") + ". Fee " + S.money(b.fee) + ". The house " + S.money(0) + ".</p>";
+  }
+  form.amount.addEventListener("input", preview);
+  list.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-support]"); if (!b) return;
+    song = S.examples.filter(function (s) { return s.id === b.getAttribute("data-support"); })[0];
+    document.getElementById("shDlgSong").textContent = song.title + " · " + song.writers.join(", ");
+    form.querySelectorAll(".field, .consent, .sh-actions, .note-small").forEach(function (el) { el.hidden = false; });
+    document.getElementById("shSent").hidden = true; err.hidden = true; preview();
+    if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+    form.amount.focus();
+  });
+  var shut = function () { dlg.close ? dlg.close() : dlg.removeAttribute("open"); };
+  document.getElementById("shCancel").onclick = shut; document.getElementById("shDone").onclick = shut;
+  function fail(m, el) { err.textContent = m; err.hidden = false; if (el) el.focus(); }
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); err.hidden = true;
+    if (!(Number(form.amount.value) > 0)) return fail("Choose an amount, any amount.", form.amount);
+    if (!form.email.value || !form.email.checkValidity()) return fail("That email doesn't look right.", form.email);
+    if (!form.consent.checked) return fail("Tick the box so we can email you the payment link.", form.consent);
+    var data = new URLSearchParams({ form_type: "shelf-support", song_id: song.id, song_title: song.title, amount_php: String(Number(form.amount.value)),
+      first_name: form.first_name.value.trim(), email: form.email.value.trim(), share_with_writers: form.share.checked ? "yes" : "no", consent: "yes",
+      source: "shelf-page", submitted_at: new Date().toISOString() });
+    var done = function () { form.querySelectorAll(".field, .consent, .sh-actions, .note-small, .preview").forEach(function (el) { el.hidden = true; }); live.innerHTML = ""; document.getElementById("shSent").hidden = false; };
+    if (!url) return done();
+    fetch(url, { method: "POST", mode: "no-cors", body: data }).then(done).catch(function () { fail("We couldn't send that. Check your connection and try again."); });
+  });
+})();
+</script>
+<script src="assets/analytics.js" defer></script>
+</body>
+</html>

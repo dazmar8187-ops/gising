@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Feature flags · Gising Sining House</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="../assets/icons/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+.ff-head{display:grid;gap:12px;margin-bottom:28px}
+.ff-head h1{font-size:var(--step-3);font-weight:800}
+.ff-bar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:12px 0 0}
+.ff-mode{font-family:var(--mono);font-size:var(--step--1);padding:4px 10px;border-radius:999px;background:var(--paper-2)}
+.ff-mode.live{background:var(--accent);color:var(--accent-ink)}
+.ff-group{margin-top:36px}
+.ff-group h2{font-size:var(--step-2);font-weight:800;margin-bottom:6px}
+.ff-group > p{color:var(--ink-soft)}
+.ff-list{border-top:2px solid var(--ink);margin-top:16px}
+.ff-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+.ff-row h3{font-size:1.1rem}
+.ff-row p{color:var(--ink-soft);font-size:.95rem;margin-top:4px}
+.ff-row .where{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent)}
+.ff-row .try{font-family:var(--mono);font-size:.75rem;margin-top:6px;display:inline-block}
+.sw{position:relative;display:inline-flex;align-items:center;gap:10px;cursor:pointer;font-family:var(--mono);font-size:.78rem}
+.sw input{position:absolute;opacity:0;width:44px;height:26px;margin:0;cursor:pointer}
+.sw span{width:44px;height:26px;border-radius:999px;background:var(--line);position:relative;transition:background .2s}
+.sw span::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:transform .2s}
+.sw input:checked + span{background:var(--accent)}
+.sw input:checked + span::after{transform:translateX(18px)}
+.sw input:focus-visible + span{outline:3px solid var(--accent);outline-offset:2px}
+.ff-msg{font-family:var(--mono);font-size:var(--step--1);color:var(--accent);min-height:1.4em}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <svg width="26" height="22" viewBox="0 0 26 22" aria-hidden="true"><g stroke="currentColor" stroke-width="1.6"><path d="M0 2h26M0 6.5h26M0 11h26M0 15.5h26M0 20h26"/></g><circle cx="17" cy="11" r="3.6" fill="var(--accent)"/></svg>
+      <span data-brand>Gising Sining House</span>
+    </a>
+    <a class="btn ghost" href="../admin/">Admin</a>
+  </div>
+</header>
+<main class="page">
+  <div class="wrap">
+    <div class="ff-head">
+      <p class="eyebrow">Host only · feature flags</p>
+      <h1>Turn features on when they're ready.</h1>
+      <p class="lede">Every "could add", "truly great" and "our versions" feature is built and waiting behind a switch. Turn one on and it appears for members straight away; turn it off and it disappears, with nothing lost.</p>
+      <div class="ff-bar"><span class="ff-mode" id="ffMode">Checking…</span><button class="btn ghost" type="button" id="allOn">Turn all on</button><button class="btn ghost" type="button" id="allOff">Turn all off</button></div>
+      <p class="ff-msg" id="ffMsg" role="status" aria-live="polite"></p>
+    </div>
+    <section class="ff-group" aria-labelledby="gCould"><h2 id="gCould">Could add</h2><p>Valuable next steps, ordered by what members ask for.</p><div class="ff-list" id="listCould"></div></section>
+    <section class="ff-group" aria-labelledby="gGreat"><h2 id="gGreat">Truly great</h2><p>The features no other songwriting membership has.</p><div class="ff-list" id="listGreat"></div></section>
+    <section class="ff-group" aria-labelledby="gOurs"><h2 id="gOurs">Our versions</h2><p>Ideas Song House does, rebuilt the artist-first way.</p><div class="ff-list" id="listOurs"></div></section>
+  </div>
+</main>
+<footer><div class="wrap"><span>© 2026 <span data-brand>Gising Sining House</span> · <a href="../index.html">Home</a> · <a href="../admin/">Admin</a></span><span>Write with People, Finish the Song</span></div></footer>
+<script src="../assets/config.js"></script>
+<script src="../assets/flags.js"></script>
+<script>
+(function () {
+  var TRY = { messages: "../app/#/messages", "audio-notes": "../app/#/feed/feedback", "live-lyrics": "../app/#/cowrites", circles: "../app/#/circles", filipino: "../index.html", events: "../app/#/events",
+    referrals: "../app/#/invite", scholarships: "../scholarships.html", brands: "../brands.html", articles: "../notes/", "public-profiles": "../app/#/me", booth: "../app/#/booth", "native-apps": "",
+    "song-ledger": "../app/#/ledger", "pitch-pipeline": "../app/#/pitches", "live-writing-room": "../app/#/cowrites", "smart-pairing": "../app/#/cowrites", "stave-portfolio": "../app/#/stave",
+    "asia-first": "../app/#/me", "one-account": "../app/#/pass", "mentor-network": "../app/#/mentors",
+    "where-you-stand": "../where-you-stand.html", credits: "../app/#/stave", "the-shelf": "../shelf.html", "house-run": "../merch.html", "house-letter": "../app/#/letters" };
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var msg = document.getElementById("ffMsg");
+  function row(f) {
+    var on = Flags.isOn(f.id), t = TRY[f.id];
+    return '<div class="ff-row"><div><span class="where">' + esc(f.where) + "</span><h3>" + esc(f.name) + "</h3><p>" + esc(f.desc) + "</p>" +
+      (t ? '<a class="try" href="' + t + '">Open it →</a>' : "") + '</div><label class="sw"><input type="checkbox" id="ff-' + f.id + '" data-id="' + f.id + '"' + (on ? " checked" : "") + '><span></span><em>' + (on ? "On" : "Off") + "</em></label></div>";
+  }
+  function draw() {
+    document.getElementById("listCould").innerHTML = Flags.list.filter(function (f) { return f.group === "could"; }).map(row).join("");
+    document.getElementById("listGreat").innerHTML = Flags.list.filter(function (f) { return f.group === "great"; }).map(row).join("");
+    document.getElementById("listOurs").innerHTML = Flags.list.filter(function (f) { return f.group === "ours"; }).map(row).join("");
+    var m = document.getElementById("ffMode");
+    m.textContent = Flags.remote ? "Live: shared with every visitor" : "Demo: saved in this browser only";
+    m.classList.toggle("live", Flags.remote);
+  }
+  function done(p, text) {
+    p.then(function () { msg.textContent = text; draw(); }, function (err) { msg.textContent = (err && err.message) || "That didn't save. Sign in as the host and try again."; Flags.load().then(draw); });
+  }
+  document.addEventListener("change", function (e) {
+    var id = e.target.dataset.id; if (!id) return;
+    var f = Flags.list.filter(function (x) { return x.id === id; })[0];
+    done(Flags.set(id, e.target.checked), f.name + (e.target.checked ? " is on." : " is off."));
+  });
+  document.getElementById("allOn").addEventListener("click", function () { done(Flags.setAll(true), "Every feature is on."); });
+  document.getElementById("allOff").addEventListener("click", function () { done(Flags.setAll(false), "Every feature is off."); });
+  Flags.ready.then(draw, draw);
+})();
+</script>
+</body>
+</html>

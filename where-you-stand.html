@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Where You Stand Right Now · Gising Sining House</title>
+<meta name="description" content="A free ten-minute check of where your songwriting stands on the five lines of the stave, your role in a writing room, and one thing to do this week.">
+<link rel="canonical" href="https://gising.netlify.app/where-you-stand.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Where You Stand Right Now · Gising Sining House">
+<meta property="og:description" content="Where do your songs actually stand? Twenty honest statements, ten minutes, one move for this week.">
+<meta property="og:url" content="https://gising.netlify.app/where-you-stand.html">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/flagpages.css">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#2D47B8">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg width="26" height="22" viewBox="0 0 26 22" aria-hidden="true"><g stroke="currentColor" stroke-width="1.6"><path d="M0 2h26M0 6.5h26M0 11h26M0 15.5h26M0 20h26"/></g><circle cx="17" cy="11" r="3.6" fill="var(--accent)"/></svg>
+      <span data-brand>Gising Sining House</span>
+    </a>
+    <ul>
+      <li><a href="room.html">The Room</a></li>
+      <li><a href="camps.html">Camps</a></li>
+      <li><a href="#start">Start</a></li>
+    </ul>
+    <div class="nav-actions"><a class="btn" href="join.html">Join free</a></div>
+  </div>
+</header>
+
+<main class="flag-closed" data-flag-off="where-you-stand" hidden>
+  <div class="wrap">
+    <p class="eyebrow">Where You Stand Right Now</p>
+    <h1>This page isn't open yet.</h1>
+    <p>Where You Stand Right Now is coming. Join the Room, free, and you'll hear as soon as it opens.</p>
+    <a class="btn" href="join.html">Join free</a>
+  </div>
+</main>
+
+<main id="main" data-flag="where-you-stand" hidden>
+  <div class="fp-hero">
+    <div class="wrap">
+      <p class="eyebrow">Where You Stand Right Now · free · about ten minutes</p>
+      <h1>Where do your songs actually stand?</h1>
+      <p class="lede">This isn't a personality test, and it won't tell you who you are. It's twenty honest statements about your songwriting, four on each line of the stave, and five about how you work in a writing room. You get the line you're strong on, the line that's open, your role in a room, and one thing to do this week.</p>
+      <div class="ctas"><a class="btn" href="#start">Find out where you stand</a><a class="btn ghost" href="room.html#stave">What are the 5 Keys?</a></div>
+    </div>
+  </div>
+
+  <section id="why">
+    <div class="wrap">
+      <div class="fp-cards">
+        <article class="fp-card">
+          <h3>Where you stand, not who you are</h3>
+          <p>A type says you're wired a certain way and leaves you there. This says where you are today, and today changes. Come back in three months and you should see lines move.</p>
+        </article>
+        <article class="fp-card">
+          <h3>What the five lines are</h3>
+          <ul>
+            <li><b>E · Establish:</b> finished songs, signed splits, registered work</li>
+            <li><b>G · Grow:</b> writing with people and getting better from it</li>
+            <li><b>B · Book:</b> songs heard by people in a room</li>
+            <li><b>D · Deliver:</b> taking a song all the way to a pitchable demo</li>
+            <li><b>F · Flourish:</b> the money side, and a rhythm that lasts</li>
+          </ul>
+        </article>
+        <article class="fp-card ink">
+          <h3>No sign-up to see it</h3>
+          <p>Your result appears on this page as soon as you finish. Add your email at the end only if you want a copy, or the weekly prompt.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="start">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">The questions</p>
+        <h2>Answer for today, not for the writer you plan to be.</h2>
+      </div>
+      <form class="rd-form" id="rdForm" novalidate>
+        <div id="rdQs"></div>
+        <p class="err" id="rdErr" hidden></p>
+        <button class="btn" type="submit">See where I stand</button>
+      </form>
+      <div class="rd-result" id="rdResult" hidden tabindex="-1"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-brand"><span>© 2026 <span data-brand>Gising Sining House</span> · Manila</span><span>Write with People, Finish the Song</span></div>
+    <nav class="footer-links" aria-label="Footer">
+      <ul><li><a href="room.html">The Room</a></li><li><a href="camps.html">Camps</a></li><li><a href="services.html">Services</a></li><li><a href="academy.html">Academy</a></li><li><a href="about.html">About</a></li><li><a href="mentors.html">Mentors</a></li><li><a href="contact.html">Contact</a></li><li><a href="join.html">Join free</a></li></ul>
+      <ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="camp-terms.html">Camp terms</a></li><li><a href="community.html">Community guidelines</a></li><li><a href="member-agreement.html">Member agreement</a></li></ul>
+    </nav>
+  </div>
+</footer>
+<script src="assets/config.js"></script>
+<script src="assets/flags.js"></script>
+<script src="assets/flag-links.js"></script>
+<script src="assets/where-you-stand.js"></script>
+<script>
+(function () {
+  var SR = window.WhereYouStand, form = document.getElementById("rdForm"); if (!SR || !form) return;
+  var KEY = "gs_where_you_stand";
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var saved = {}; try { saved = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { saved = {}; }
+  var answers = saved.answers || {};
+
+  var html = SR.lines.map(function (L) {
+    return '<fieldset class="rd-group"><legend><span class="rd-key">' + L.key + "</span> " + esc(L.name) + "<small>" + esc(L.ask) + "</small></legend>" +
+      SR.statements.filter(function (s) { return s.line === L.key; }).map(function (s) {
+        return '<div class="rd-q" role="radiogroup" aria-labelledby="' + s.id + '-t"><p id="' + s.id + '-t">' + esc(s.text) + '</p><div class="rd-scale">' +
+          SR.scale.map(function (o) { return '<label><input type="radio" name="' + s.id + '" value="' + o.v + '"' + (String(answers[s.id]) === String(o.v) ? " checked" : "") + "><span>" + o.label + "</span></label>"; }).join("") + "</div></div>";
+      }).join("") + "</fieldset>";
+  }).join("") + '<fieldset class="rd-group"><legend><span class="rd-key">♪</span> In a writing room<small>Pick the answer that sounds most like you.</small></legend>' +
+    SR.roleQuestions.map(function (q) {
+      return '<div class="rd-q" role="radiogroup" aria-labelledby="' + q.id + '-t"><p id="' + q.id + '-t">' + esc(q.text) + '</p><div class="rd-opts">' +
+        Object.keys(q.opts).map(function (k) { return '<label><input type="radio" name="' + q.id + '" value="' + k + '"' + (answers[q.id] === k ? " checked" : "") + "><span>" + esc(q.opts[k]) + "</span></label>"; }).join("") + "</div></div>";
+    }).join("") + "</fieldset>";
+  document.getElementById("rdQs").innerHTML = html;
+
+  function read() {
+    var a = {};
+    SR.statements.forEach(function (s) { var c = form.querySelector('input[name="' + s.id + '"]:checked'); if (c) a[s.id] = Number(c.value); });
+    SR.roleQuestions.forEach(function (q) { var c = form.querySelector('input[name="' + q.id + '"]:checked'); if (c) a[q.id] = c.value; });
+    return a;
+  }
+  form.addEventListener("change", function () { answers = read(); try { localStorage.setItem(KEY, JSON.stringify({ answers: answers })); } catch (e) {} });
+
+  function stave(scores) {
+    // Five lines, E at the bottom. Each line fills to its score.
+    var rows = SR.lines.slice().reverse();
+    return '<svg class="rd-stave" viewBox="0 0 320 150" role="img" aria-label="' + esc(SR.lines.map(function (L) { return L.key + " " + scores[L.key] + "%"; }).join(", ")) + '">' +
+      rows.map(function (L, i) {
+        var y = 15 + i * 30, w = Math.max(4, Math.round(260 * scores[L.key] / 100));
+        return '<text x="0" y="' + (y + 5) + '" class="rd-sk">' + L.key + '</text><line x1="24" x2="284" y1="' + y + '" y2="' + y + '" class="rd-sl"/>' +
+          '<line x1="24" x2="' + (24 + w) + '" y1="' + y + '" y2="' + y + '" class="rd-sf"/><circle cx="' + (24 + w) + '" cy="' + y + '" r="6" class="rd-sd"/>' +
+          '<text x="320" y="' + (y + 5) + '" text-anchor="end" class="rd-sp">' + scores[L.key] + "</text>";
+      }).join("") + "</svg>";
+  }
+
+  function show(r) {
+    var box = document.getElementById("rdResult"), cfg = window.HOUSE || { ghl: {} };
+    var url = cfg.ghl && (cfg.ghl.newsletterWebhookUrl || cfg.ghl.webhookUrl);
+    box.innerHTML = '<p class="eyebrow">Where you stand · ' + new Date(r.at).toLocaleDateString(undefined, { day: "numeric", month: "long", year: "numeric" }) + "</p>" +
+      "<h2>" + esc(SR.headline(r)) + "</h2>" +
+      '<div class="rd-grid"><div>' + stave(r.scores) + '<p class="note-small">Each line shows how much of it is already true for you, out of 100. It\'s a baseline, not a grade.</p></div>' +
+      '<div class="rd-cards"><article class="fp-card ink"><p class="eyebrow">Your move this week · ' + r.open.key + " line</p><h3>" + esc(r.open.move) + '</h3><p>In the house this is ' + esc(r.open.room) + '. <a href="' + esc(r.open.where.href) + '">' + esc(r.open.where.label) + " →</a></p></article>" +
+      '<article class="fp-card"><p class="eyebrow">In a writing room you\'re ' + esc(r.role.name) + (r.second ? ", with some of " + esc(r.second.name) : "") + "</p>" +
+      "<p><b>What you bring:</b> " + esc(r.role.brings) + "</p><p><b>What trips you up:</b> " + esc(r.role.trips) + "</p><p><b>Write with:</b> " + esc(r.role.pair) + ". The Pairing looks for this.</p><p><b>The money side:</b> " + esc(r.role.money) + "</p></article></div></div>" +
+      '<form class="fp-form rd-keep" id="rdKeep"><h3>Want a copy?</h3><p>We\'ll email your result, and the free weekly prompt. Leave any time.</p>' +
+      '<div class="field"><label for="rd-name">First name</label><input id="rd-name" name="first_name" autocomplete="given-name"></div>' +
+      '<div class="field"><label for="rd-email">Email</label><input id="rd-email" name="email" type="email" autocomplete="email" required></div>' +
+      '<label class="consent"><input type="checkbox" name="consent" value="yes" required> Email me my result and the weekly prompt. See the <a href="privacy.html">privacy policy</a>.</label>' +
+      (url ? "" : '<p class="preview">Preview mode: this form isn\'t connected to GoHighLevel yet, so nothing is saved.</p>') +
+      '<p class="err" id="rdKeepErr" hidden></p><button class="btn" type="submit">Send me my result</button><p class="sent-msg" id="rdSent" hidden>Sent. Check your inbox.</p></form>' +
+      '<p class="rd-again"><button class="btn ghost" type="button" id="rdRedo">Change my answers</button> <a class="btn ghost" href="join.html">Join the Room, free</a></p>';
+    box.hidden = false; box.focus(); box.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById("rdRedo").onclick = function () { box.hidden = true; form.hidden = false; form.scrollIntoView({ behavior: "smooth" }); };
+    var keep = document.getElementById("rdKeep"), err = document.getElementById("rdKeepErr");
+    keep.addEventListener("submit", function (e) {
+      e.preventDefault(); err.hidden = true;
+      if (!keep.email.value || !keep.email.checkValidity()) { err.textContent = "That email doesn't look right."; err.hidden = false; return; }
+      if (!keep.consent.checked) { err.textContent = "Tick the box so we can email you."; err.hidden = false; return; }
+      var data = new URLSearchParams({ form_type: "where-you-stand", first_name: keep.first_name.value.trim(), email: keep.email.value.trim(), consent: "yes",
+        stand_strong: r.strong.key, stand_open: r.open.key, stand_role: r.roleId,
+        stand_scores: SR.lines.map(function (L) { return L.key + ":" + r.scores[L.key]; }).join(" "), source: "where-you-stand-page", submitted_at: new Date().toISOString() });
+      var done = function () { keep.querySelectorAll(".field, .consent, button, .preview").forEach(function (el) { el.hidden = true; }); document.getElementById("rdSent").hidden = false; };
+      if (!url) return done();
+      fetch(url, { method: "POST", mode: "no-cors", body: data }).then(done).catch(function () { err.textContent = "We couldn't send that. Check your connection and try again."; err.hidden = false; });
+    });
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var a = read(), err = document.getElementById("rdErr");
+    if (!SR.complete(a)) {
+      var missing = SR.statements.concat(SR.roleQuestions).filter(function (q) { return a[q.id] === undefined; }).length;
+      err.textContent = missing + (missing === 1 ? " question is" : " questions are") + " still open. Every one counts."; err.hidden = false;
+      var firstOpen = SR.statements.concat(SR.roleQuestions).filter(function (q) { return a[q.id] === undefined; })[0];
+      var el = form.querySelector('input[name="' + firstOpen.id + '"]'); if (el) el.focus();
+      return;
+    }
+    err.hidden = true; form.hidden = true;
+    var r = SR.result(a);
+    try { localStorage.setItem(KEY, JSON.stringify({ answers: a, result: { strong: r.strong.key, open: r.open.key, role: r.roleId, scores: r.scores, at: r.at } })); } catch (e2) {}
+    show(r);
+  });
+})();
+</script>
+<script src="assets/analytics.js" defer></script>
+</body>
+</html>

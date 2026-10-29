@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Flagged pages (scholarships, brands, events, notes/, fil/) are left out until their flag is switched on at /feature-flags. Add them here then. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://gising.netlify.app/</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://gising.netlify.app/room.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://gising.netlify.app/camps.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://gising.netlify.app/services.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://gising.netlify.app/academy.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://gising.netlify.app/academy-refer.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://gising.netlify.app/academy-sponsor.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://gising.netlify.app/academy-mentor.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://gising.netlify.app/join.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://gising.netlify.app/about.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://gising.netlify.app/mentors.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://gising.netlify.app/contact.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://gising.netlify.app/privacy.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://gising.netlify.app/terms.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://gising.netlify.app/camp-terms.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://gising.netlify.app/community.html</loc><lastmod>2026-10-10</lastmod></url>
+  <url><loc>https://gising.netlify.app/member-agreement.html</loc><lastmod>2026-10-10</lastmod></url>
+</urlset>
